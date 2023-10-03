@@ -21,11 +21,12 @@ async function example() {
     } catch (err) {
       console.log(err);
     }}
+
 function recursivelyLog(tree_node,indent_count = 0){
     var indentation = '\t'
     for (var i = 0; i < tree_node.childCount; i++){
         var child_node = tree_node.child(i)
-        console.log(indentation.repeat(indent_count) + tree_node.type + '(' + tree_node.startPosition.row + ',' + tree_node.startPosition.column + ') , (' + tree_node.endPosition.row + ',' + tree_node.endPosition.column +  ')')
+        console.log(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column +  ')')
         recursivelyLog(child_node,indent_count + 1)
     }
 }
