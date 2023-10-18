@@ -9,7 +9,8 @@ async function example() {
     try { 
         const sourceCode = await fs.readFile('parsee_single_class.js', { encoding: 'utf8' });
         const tree = parser.parse(sourceCode);
-        // recursivelyLog(tree.rootNode)
+        const a = recursivelyLog(tree.rootNode)
+        console.log(a.join())
         const query = new Parser.Query(JavaScript,'(call_expression) @call')
         const matches= query.matches(tree.rootNode)
         for (let match of matches) {
@@ -22,14 +23,17 @@ async function example() {
       console.log(err);
     }}
 
-function recursivelyLog(tree_node,indent_count = 0){
-    var indentation = '\t'
-    for (var i = 0; i < tree_node.childCount; i++){
-        var child_node = tree_node.child(i)
-        console.log(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column +  ')')
-        recursivelyLog(child_node,indent_count + 1)
-    }
-}
+    function recursivelyLog(tree_node,indent_count = 0){
+      var indentation = '\t'
+      var codeStructures = [];
+      for (var i = 0; i < tree_node.childCount; i++){
+          var child_node = tree_node.child(i)
+          codeStructures.push(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column +  ')' +'\n')
+          // console.log(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column +  ')')
+          codeStructures.push(...recursivelyLog(child_node,indent_count + 1))
+      }
+      return codeStructures
+  }
 
 example()
 

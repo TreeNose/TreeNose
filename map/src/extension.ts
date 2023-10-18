@@ -2,7 +2,7 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-    let currentFileCheck = vscode.commands.registerCommand('currentWindow',()=>
+    let currentFileCheck = vscode.commands.registerCommand('map.parseCurrentWindow',()=>
     {
       const currentFile = vscode.window.activeTextEditor?.document;
       if ( typeof currentFile !== "undefined"){
@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(currentFile.fileName);
         vscode.window.showInformationMessage(currentFile.languageId);
         var fileText = currentFile.getText();
-        const JavaScript =  require('tree-sitter-javascript');
+        const JavaScript =  require('tree-sitter-javascript'); 
         const TreeSitter =  require('tree-sitter');
         const parser = new TreeSitter();
         parser.setLanguage(JavaScript);
