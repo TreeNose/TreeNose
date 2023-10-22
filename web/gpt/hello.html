@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POST Request Example</title>
+</head>
+<body>
+    <h1>Send a POST Request</h1>
+    <button id="sendButton">Send POST Request</button>
+    <div id="response"></div>
+
+    <script>
+        const sendButton = document.getElementById('sendButton');
+        const responseDiv = document.getElementById('response');
+
+        sendButton.addEventListener('click', () => {
+            // Define the data you want to send in the POST request
+            const data = {
+                // You can add more data properties as needed
+            };
+
+            // Send the POST request to your Express server
+            fetch('http://localhost:3000/hello', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.text())
+            .then(result => {
+                responseDiv.innerHTML = result;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

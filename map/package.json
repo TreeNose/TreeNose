@@ -2,6 +2,7 @@
   "name": "map",
   "displayName": "map",
   "description": "",
+  "type": "commonjs",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.82.0"
@@ -14,8 +15,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "map.parseCurrentWindow",
-        "title": "parse current window"
+        "command": "map.parsePython",
+        "title": "parse python to tree"
+      },
+      
+      {
+        "command": "map.parseJS",
+        "title": "parse javascript to tree"
       }
     ]
   },
@@ -44,7 +50,9 @@
   },
   "dependencies": {
     "tree-sitter": "^0.20.6",
+    "tree-sitter-cli": "^0.20.8",
     "tree-sitter-javascript": "^0.20.1",
-    "tree-sitter-python": "^0.20.4"
+    "tree-sitter-python": "^0.20.4",
+    "web-tree-sitter": "^0.20.8"
   }
 }
