@@ -1,0 +1,16 @@
+{
+  "name": "to-be-decided",
+  "version": "1.0.0",
+  "description": "A language-indepedent code smells detection tool based on tree sitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yanqiao Chen",
+  "license": "ISC",
+  "dependencies": {
+    "tree-sitter": "^0.20.6",
+    "tree-sitter-java": "^0.20.2",
+    "tree-sitter-python": "^0.20.4"
+  }
+}
