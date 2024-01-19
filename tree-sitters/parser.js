@@ -2,12 +2,12 @@ const fs = require('fs/promises');
 
 const args = require('yargs').argv
 const parsee_file = args.file
-
+const lang = args.lang
 
 const Parser = require('tree-sitter');
-const Python = require('tree-sitter-python');
+const TargetLang = require(`tree-sitter-${lang}`);
 const parser = new Parser();
-parser.setLanguage(Python);
+parser.setLanguage(TargetLang);
 
 console.log(parsee_file)
 
@@ -17,7 +17,7 @@ async function example() {
         const tree = parser.parse(sourceCode);
         const a = recursivelyLog(tree.rootNode)
         console.log(a.join())
-        const query = new Parser.Query(Python,'(call_expression) @call')
+        const query = new Parser.Query(TargetLang,'(call_expression) @call')
         const matches= query.matches(tree.rootNode)
         for (let match of matches) {
           const captures = match.captures
