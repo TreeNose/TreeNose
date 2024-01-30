@@ -1,0 +1,7 @@
+{
+    "method_definition":{
+        "python": ["function_definition","decorated_definition"],
+        "javascript": ["method_definition","function_declaration","arrow_function"],
+        "javas": ["method_declaration"]
+    }
+}
