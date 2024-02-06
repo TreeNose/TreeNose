@@ -12,29 +12,12 @@ class c:
     def d(self):
         return
     
-# Pseudo Code
+def getNameArray(a,b,c):
+    nameArray = list('John','Jaclyn','Jim','Joseph')
+    a = 1 * 2
+    for name in nameArray:
+        print(name)
 
-def getNameArray():
-    nameArray = list('John','Jaclyn','Jim','Joseph')
-    for name in nameArray:
-        print(name)
-    print(1)
-    nameArray = list('John','Jaclyn','Jim','Joseph')
-    for name in nameArray:
-        print(name)
-    print(1)
-    nameArray = list('John','Jaclyn','Jim','Joseph')
-    for name in nameArray:
-        print(name)
-    print(1)
-    nameArray = list('John','Jaclyn','Jim','Joseph')
-    for name in nameArray:
-        print(name)
-    print(1)
-    nameArray = list('John','Jaclyn','Jim','Joseph')
-    for name in nameArray:
-        print(name)
-    print(1)
 
 class A:
     def __init__(self) -> None:
