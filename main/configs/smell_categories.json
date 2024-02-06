@@ -1,7 +1,81 @@
 {
-    "method_definition":{
-        "python": ["function_definition","decorated_definition"],
-        "javascript": ["method_definition","function_declaration","arrow_function"],
-        "java": ["method_declaration"]
+    "grammar": {
+        "class_definition": {
+            "python": [
+                "class_definition"
+            ],
+            "java": [
+                "class_declaration"
+            ],
+            "javascript": [
+                "class_declaration"
+            ]
+        },
+        "method_definition": {
+            "python": [
+                "function_definition"
+            ],
+            "javascript": [
+                "method_definition",
+                "function_declaration",
+                "arrow_function"
+            ],
+            "java": [
+                "method_declaration"
+            ]
+        },
+        "parameters": {
+            "python": [
+                "parameters"
+            ],
+            "java": [
+                "formal_parameters"
+            ],
+            "javascript": [
+                "formal_parameters"
+            ]
+        },
+        "field":{
+            "python": [
+                "attribute"
+            ],
+            "java": [
+                "field_declaration"
+            ],
+            "javascript": [
+                "field_definition"
+            ]
+        },
+        "parameter": {
+            "python": [
+                "identifier",
+                "default_parameter",
+                "typed_parameter",
+                "typed_default_parameter"
+            ],
+            "java": [
+                "identifier"
+            ],
+            "javascript": [
+                "identifier",
+                "assignment_pattern",
+                "array_pattern",
+                "object_pattern"
+            ]
+        }
+    },
+    "node":{
+        "parameters": {
+            "java": [
+                "formal_parameters"
+            ],
+            "python": [
+                "parameters"
+            ],
+            "javascript": [
+                "parameters"
+            ]
+        }
     }
+
 }
