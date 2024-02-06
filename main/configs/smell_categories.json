@@ -18,7 +18,8 @@
             "javascript": [
                 "method_definition",
                 "function_declaration",
-                "arrow_function"
+                "arrow_function",
+                "generator_function_declaration"
             ],
             "java": [
                 "method_declaration"
