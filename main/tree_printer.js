@@ -17,12 +17,12 @@ async function example() {
         const tree = parser.parse(sourceCode);
         const a = recursivelyLog(tree.rootNode)
         console.log(a.join())
-        const query = new Parser.Query(TargetLang,'(function_definition) @call')
+        const query = new Parser.Query(TargetLang,'(attribute) @call')
         const matches= query.matches(tree.rootNode)
         for (let match of matches) {
           const captures = match.captures
           for (let capture of captures) {
-                console.log(capture)
+                console.log(capture.node.text)
           }
         }
     } catch (err) {
