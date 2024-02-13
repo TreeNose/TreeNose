@@ -1,4 +1,3 @@
-// ES6 version using asynchronous iterators, compatible with node v10.0+
 const { promises } = require("fs");
 const fs = require('fs');
 const { join } = require("path");
@@ -25,9 +24,9 @@ async function* walk(dir, extType) {
 
 // Then, use it with a simple async for loop
 async function main() {
-    console.log(ignoreRegex)
     for await (const p of walk('.', '.js'))
         console.log(p)
 }
 
-main()
+
+module.exports = { walk }
