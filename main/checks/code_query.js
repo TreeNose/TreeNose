@@ -1,7 +1,7 @@
 const Parser = require('tree-sitter');
 const parser = new Parser();
 const fs = require('fs');
-const Syntaxes = JSON.parse(fs.readFileSync('./configs/univseral_configs.json', 'utf8'));
+const Syntaxes = JSON.parse(fs.readFileSync('./configs/smell_categories.json', 'utf8'));
 
 function fetchCode (sourceCode, lang, smell) {
     var matches = []
@@ -9,7 +9,7 @@ function fetchCode (sourceCode, lang, smell) {
     parser.setLanguage(targetLang);
     const tree = parser.parse(sourceCode);
     // Get the language specific smells from the smell json with the generalized smell
-    const syntax_specific_smells = Syntaxes[smell][lang]
+    const syntax_specific_smells = Syntaxes["grammar"][smell][lang]
 
     for (let s of syntax_specific_smells){
         const query = new Parser.Query(targetLang,`(${s}) @${smell}`);
