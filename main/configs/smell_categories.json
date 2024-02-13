@@ -74,7 +74,7 @@
                 "parameters"
             ],
             "javascript": [
-                "parameters"
+                "formal_parameters", "parameters"
             ]
         }
     }
