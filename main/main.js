@@ -8,19 +8,26 @@ const smell = args.smell
 const { longMethods } = require('./checks/smell_long_method')
 const {longParameters} = require('./checks/smell_long_param')
 const {longClass} = require('./checks/smell_long_class')
+const { walk } = require('./code_extractor')
 
 async function main(){
-    codes = await fs.readFile(parsee_file, { encoding: 'utf8' });
-    if (smell == 'long_method'){
-        code_matches = fetchCode(codes,lang,'method_definition')
-        longMethods(code_matches,1)
-    } else if (smell == 'long_parameter'){
-        code_matches = fetchCode(codes,lang,'method_definition')
-        longParameters(code_matches,1,lang)
-    } else if (smell == 'long_class'){
-        code_matches = fetchCode(codes,lang,'class_definition')
-        longClass(code_matches,1,1,lang)
+    for await (const target_file of walk('.', '.java')){
+        console.log(target_file)
+        const src_code = await fs.readFile(target_file, 'utf8')
+        checkCodeSmells(src_code, 'java')
     }
+    }
+
+function checkCodeSmells(src_code, lang){
+
+    code_matches = fetchCode(src_code,lang,'method_definition')
+    longMethods(code_matches,1)
+
+    code_matches = fetchCode(src_code,lang,'method_definition')
+    longParameters(code_matches,1,lang)
+
+    code_matches = fetchCode(src_code,lang,'class_definition')
+    longClass(code_matches,1,1,lang)
 }
 
 main()
