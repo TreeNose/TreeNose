@@ -18,6 +18,7 @@
     - [Environment Setup](#environment-setup-1)
     - [Run the parser](#run-the-parser)
   - [Future Plans](#future-plans)
+- [Development Note](#development-note)
 
 ## Introduction
 
@@ -98,3 +99,8 @@ Note: `lang` flag accepts: 1. java 2. python 3. javascript
 
 - Check the feasibility of fetching code with VSCode
 - Interact Node-Tree-Sitter with VSCode
+
+# Development Note
+
+- Currently god class code smell has only method amounts as the metric
+- Generator function in Python tree-sitter is treated as expression statement but not function definition
