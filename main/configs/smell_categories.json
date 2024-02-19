@@ -1,5 +1,27 @@
 {
     "grammar": {
+        "call":{ 
+            "python": [
+                "call"
+            ],
+            "java": [
+                "method_invocation"
+            ],
+            "javascript": [
+                "call_expression"
+            ]
+        },
+        "attribute_access":{
+            "python": [
+                "attribute"
+            ],
+            "java": [
+                "field_access"
+            ],
+            "javascript": [
+                "member_expression"
+            ]
+        },
         "class_definition": {
             "python": [
                 "class_definition"
