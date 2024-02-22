@@ -11,6 +11,17 @@
                 "call_expression"
             ]
         },
+        "call_attribute": {
+            "python": [
+                "attribute"
+            ],
+            "java": [
+                ""
+            ],
+            "javascript": [
+                "member_expression"
+            ]
+        },
         "attribute_access":{
             "python": [
                 "attribute"

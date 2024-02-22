@@ -5,15 +5,19 @@ const Parser = require('tree-sitter');
 const fs = require('fs');
 const Syntaxes = JSON.parse(fs.readFileSync('./configs/smell_categories.json', 'utf8'));
 
-const TargetNode = ['call']
+// Caution: order matters here. The program always check the first element and roate the array
+const TargetNodes = ['call_attribute','call']
+
 var Visited = {}
 var checkedLines = []
 
 function longMessageChains(calls, threshold, lang){
-    const langTargetNode = TargetNode.map(node => Syntaxes['grammar'][node][lang]).flat()
+    var langTargetNodesChain = TargetNodes.map(node => Syntaxes['grammar'][node][lang]).flat()
+    // Remove empty syntaxes
+    langTargetNodesChain = langTargetNodesChain.filter(node => node != "")
     for (let single_call of calls){
         Visited = {}
-        callTooLong = checkDepthTooLong(single_call.node, threshold, langTargetNode)
+        callTooLong = checkDepthTooLong(single_call.node, threshold, langTargetNodesChain)
         callLine = single_call.node.startPosition.row
         if (callTooLong && ! checkedLines.includes(callLine)){
             checkedLines.push(callLine)
@@ -22,7 +26,7 @@ function longMessageChains(calls, threshold, lang){
     }
 }
 
-function checkDepthTooLong(node, threshold, targetNode, depth = 1){
+function checkDepthTooLong(node, threshold, targetNodes, depth = 1){
     if (Visited[node]){
         return false
     }
@@ -30,14 +34,11 @@ function checkDepthTooLong(node, threshold, targetNode, depth = 1){
     if (depth > threshold){
         return true
     }
+    const firstElement = targetNodes.shift();
+    targetNodes.push(firstElement)
     for (let child of node.children){
-        if (targetNode.includes(child.type)){
-            tooLong = checkDepthTooLong(child, threshold, targetNode, depth + 1)
-        }else{
-            tooLong = checkDepthTooLong(child, threshold,targetNode, depth)
-        }
-        if (tooLong){
-            return true
+        if (child.type == firstElement){
+            return checkDepthTooLong(child, threshold, targetNodes, depth + 1)
         }
     }
     return false
