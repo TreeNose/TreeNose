@@ -6,20 +6,20 @@ const parser = new Parser();
 const fs = require('fs');
 
 function longClass(classes, nol_threshold, noc_threshold, lang){
+    const dbHeader = ['start_line', 'smell', 'found_nol', 'threshold_nol', 'found_noc', 'threshold_noc']
+    var longClassSmells = [dbHeader]
     for (let cls of classes){
         clsNode = cls.node
         var noc = checkNumberOfChildren(clsNode, lang)
         var nol = checkNumberOfLine(clsNode)
-        
-        if (nol > nol_threshold){
-            console.log(`Line ${clsNode.startPosition.row}: Class is longer than ${nol_threshold} lines (found ${nol} lines)`)
+        const startLine = clsNode.startPosition.row
+        if (nol > nol_threshold || noc > noc_threshold){
+            // console.log(`Line ${clsNode.startPosition.row}: Class is longer than ${nol_threshold} lines (found ${nol} lines)`)
+            // console.log(`Line ${startLine}: Class has more than ${noc_threshold} children (found ${noc} children)`)
+            longClassSmells.push([startLine, "long class", nol, nol_threshold, noc, noc_threshold])
         }
-
-        if (noc > noc_threshold){
-            console.log(`Line ${clsNode.startPosition.row}: Class has more than ${noc_threshold} children (found ${noc} children)`)
-        }
-
     }
+    return longClassSmells
 // nol: Number of line
 // noc: number of children (attributes + methods)
 }

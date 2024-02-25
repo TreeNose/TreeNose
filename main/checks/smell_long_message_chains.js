@@ -12,6 +12,8 @@ var Visited = {}
 var checkedLines = []
 
 function longMessageChains(calls, threshold, lang){
+    dbHeader = ['line', 'smell', 'threshold']
+    var longMessageChains = [dbHeader]
     var langTargetNodesChain = TargetNodes.map(node => Syntaxes['grammar'][node][lang]).flat()
     // Remove empty syntaxes
     langTargetNodesChain = langTargetNodesChain.filter(node => node != "")
@@ -21,9 +23,11 @@ function longMessageChains(calls, threshold, lang){
         callLine = single_call.node.startPosition.row
         if (callTooLong && ! checkedLines.includes(callLine)){
             checkedLines.push(callLine)
-            console.log(`Line ${callLine}: Long message chain detected`)
+            // console.log(`Line ${callLine}: Long message chain detected`)
+            longMessageChains.push([callLine, "long message chain", threshold])
         }
     }
+    return longMessageChains
 }
 
 function checkDepthTooLong(node, threshold, targetNodes, depth = 1){
