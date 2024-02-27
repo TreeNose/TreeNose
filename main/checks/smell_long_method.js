@@ -5,8 +5,7 @@ var fs = require('fs');
 
 
 function longMethods(methods, threshold){
-    const dbHeader = ['start_line', 'smell', 'found', 'threshold']
-    var longMethodSmells = [dbHeader]
+    var longMethodSmells = []
     for(let mtd of methods){
         var node = mtd.node
         const actual_length = node.endPosition.row - node.startPosition.row

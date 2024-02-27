@@ -4,8 +4,7 @@ const fs = require('fs');
 const Syntaxes = JSON.parse(fs.readFileSync('./configs/smell_categories.json', 'utf8'));
 
 function longParameters(methods, threshold, lang){
-    const dbHeader = ['start_line', 'smell', 'found', 'threshold']
-    var longParamsSmells = [dbHeader]
+    var longParamsSmells = []
     paramsSyntaxes = Syntaxes["node"]["parameters"][lang]
     for (let mtd of methods){
         var paramsNode = findParametersFromMethod(mtd.node,paramsSyntaxes)

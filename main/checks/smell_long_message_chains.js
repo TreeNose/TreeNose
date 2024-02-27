@@ -12,8 +12,7 @@ var Visited = {}
 var checkedLines = []
 
 function longMessageChains(calls, threshold, lang){
-    dbHeader = ['line', 'smell', 'threshold']
-    var longMessageChains = [dbHeader]
+    var longMessageChains = []
     var langTargetNodesChain = TargetNodes.map(node => Syntaxes['grammar'][node][lang]).flat()
     // Remove empty syntaxes
     langTargetNodesChain = langTargetNodesChain.filter(node => node != "")

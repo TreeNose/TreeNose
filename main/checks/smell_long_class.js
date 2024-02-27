@@ -6,8 +6,7 @@ const parser = new Parser();
 const fs = require('fs');
 
 function longClass(classes, nol_threshold, noc_threshold, lang){
-    const dbHeader = ['start_line', 'smell', 'found_nol', 'threshold_nol', 'found_noc', 'threshold_noc']
-    var longClassSmells = [dbHeader]
+    var longClassSmells = []
     for (let cls of classes){
         clsNode = cls.node
         var noc = checkNumberOfChildren(clsNode, lang)
