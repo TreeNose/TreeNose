@@ -1,10 +1,10 @@
-public class Person {
+public class classes {
     // Fields or instance variables
     private String name;
     private int age;
 
     // Constructor
-    public Person(String name, int age) {
+    public classes(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -37,10 +37,12 @@ public class Person {
 
     public static void main(String[] args) {
         // Creating an instance of the Person class using the constructor
-        Person person1 = new Person("John Doe", 25);
+        classes person1 = new classes("John Doe", 25);
 
         // Displaying information about the person
         person1.displayInfo();
 
         // Modify
     }
+
+}
