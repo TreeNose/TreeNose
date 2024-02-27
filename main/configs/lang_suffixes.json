@@ -1,5 +1,5 @@
 {
-    "py":"python",
-    "java": "java",
-    "js": "javascript"
+    "python":".py",
+    "java": ".java",
+    "javascript": ".js"
 }

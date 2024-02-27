@@ -1,0 +1,15 @@
+{
+    "longMethod": {
+        "threshold": 100
+    },
+    "longParameter": {
+        "threshold": 5
+    },
+    "longClass":{
+        "threshold_nol": 100,
+        "threshold_noc": 20
+    },
+    "longMessageChain": {
+        "threshold": 5
+    }
+}
