@@ -1,5 +1,3 @@
-const { fetchCode } = require('./code_query')
-
 const Parser = require('tree-sitter');
 
 const fs = require('fs');

@@ -1,5 +1,3 @@
-const Parser = require('tree-sitter');
-const parser = new Parser();
 const fs = require('fs');
 const Syntaxes = JSON.parse(fs.readFileSync('./configs/smell_categories.json', 'utf8'));
 

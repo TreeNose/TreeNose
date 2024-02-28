@@ -1,9 +1,5 @@
 const { fetchCode } = require('./code_query')
 
-const Parser = require('tree-sitter');
-const parser = new Parser();
-
-const fs = require('fs');
 
 function longClass(classes, nol_threshold, noc_threshold, lang){
     var longClassSmells = []
