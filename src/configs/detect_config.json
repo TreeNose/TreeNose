@@ -11,5 +11,8 @@
     },
     "longMessageChain": {
         "threshold": 5
+    },
+    "complexConditional": {
+        "threshold": 3
     }
 }
