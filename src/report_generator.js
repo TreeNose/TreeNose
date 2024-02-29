@@ -6,7 +6,7 @@ class smellDB{
         this.longMessageChain = []
         this.complexConditional = []
 
-        this.longClassTitle = ['Line', 'Smell', 'Number of Lines', 'Threshold', 'Number of Children', 'Threshold', 'File']
+        this.longClassTitle = ['Line', 'Smell', 'Number of Lines', 'Threshold_nol', 'Number of Children', 'Threshold_noc', 'File']
         this.longMethodTitle = ['Line', 'Smell', 'Number of Lines', 'Threshold', 'File']
         this.longParameterTitle = ['Line', 'Smell', 'Number of Parameters', 'Threshold', 'File']
         this.longMessageChainTitle = ['Line', 'Smell', 'Threshold', 'File']
