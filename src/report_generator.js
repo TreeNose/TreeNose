@@ -4,11 +4,13 @@ class smellDB{
         this.longMethod = []
         this.longParameter = []
         this.longMessageChain = []
+        this.complexConditional = []
 
         this.longClassTitle = ['Line', 'Smell', 'Number of Lines', 'Threshold', 'Number of Children', 'Threshold', 'File']
         this.longMethodTitle = ['Line', 'Smell', 'Number of Lines', 'Threshold', 'File']
         this.longParameterTitle = ['Line', 'Smell', 'Number of Parameters', 'Threshold', 'File']
         this.longMessageChainTitle = ['Line', 'Smell', 'Threshold', 'File']
+        this.complexConditionalTitle = ['Line', 'Smell', 'Number of Conditions', 'Threshold', 'File']
     }
     /** 
      * Add smell to the database, if the smell is empty, return false
@@ -23,8 +25,11 @@ class smellDB{
 
         // Add the filename to the last column of each row
         smells = this.addFileName(fileName, smells)
+        
         console.log('-------------------')
         console.log(type)
+        console.log(smells)
+        
         if (smells[0].length != this[type + 'Title'].length){
             throw new Error('Smell and Title length mismatch');
         }
@@ -49,29 +54,31 @@ class smellDB{
             row.push(fileName)
             return row
         })
-        console.log(smellsWithFile)
 
         return smellsWithFile
     }
 
     generateCSV(desDir){
         const fs = require('fs');
-        
+        const path = require('path');
         const csvExt = '.csv'
         const lc = this.getSmell('longClass')
         const lm = this.getSmell('longMethod')
         const lp = this.getSmell('longParameter')
         const lmc = this.getSmell('longMessageChain')
+        const cc = this.getSmell('complexConditional')
 
         const csv_lc = this.arrayToCSV(lc)
         const csv_lm = this.arrayToCSV(lm)
         const csv_lp = this.arrayToCSV(lp)
         const csv_lmc = this.arrayToCSV(lmc)
+        const csv_cc = this.arrayToCSV(cc)
 
-        fs.writeFileSync(desDir+'longClass' + csvExt, csv_lc, 'utf-8');
-        fs.writeFileSync(desDir+'longMethod' + csvExt, csv_lm, 'utf-8');
-        fs.writeFileSync(desDir+'longParameter' + csvExt, csv_lp, 'utf-8');
-        fs.writeFileSync(desDir+'longMessageChain' + csvExt, csv_lmc, 'utf-8');
+        fs.writeFileSync(path.join(desDir, 'longClass') + csvExt, csv_lc, 'utf-8');
+        fs.writeFileSync(path.join(desDir, 'longMethod') + csvExt, csv_lm, 'utf-8');
+        fs.writeFileSync(path.join(desDir, 'longParameter') + csvExt, csv_lp, 'utf-8');
+        fs.writeFileSync(path.join(desDir, 'longMessageChain') + csvExt, csv_lmc, 'utf-8');
+        fs.writeFileSync(path.join(desDir, 'complexConditional') + csvExt, csv_cc, 'utf-8');
 
         return true
     }

@@ -10,6 +10,8 @@ const { longMethods } = require('./checks/smell_long_method')
 const {longParameters} = require('./checks/smell_long_param')
 const {longClass} = require('./checks/smell_long_class')
 const {longMessageChains} = require('./checks/smell_long_message_chains')
+const {complexConditional} = require('./checks/smell_complex_conditional')
+
 const { walk } = require('./code_extractor')
 const {smellDB} = require('./report_generator')
 
@@ -24,6 +26,7 @@ const longClassThreshold_noc = detectConfig.longClass.threshold_noc
 const longMethodThreshold = detectConfig.longMethod.threshold
 const longParameterThreshold = detectConfig.longParameter.threshold
 const longMessageChainThreshold = detectConfig.longMessageChain.threshold
+const complexConditionalThreshold = detectConfig.complexConditional.threshold
 
 
 
@@ -44,7 +47,7 @@ async function runCodeSmellDetection(){
     
     // If the path is a directory, then walk through the directory and its subdirectories
     for await (const target_file of walk(parsee_path, ExtConfig[lang])){
-        console.log(target_file)
+        // console.log(target_file)
         const src_code = await fs_promise.readFile(target_file, 'utf8')
         checkCodeSmells(src_code, 'java', target_file)
     }
@@ -65,10 +68,15 @@ function checkCodeSmells(src_code, lang, curFile){
     var code_matches = fetchCode(src_code,lang,'call')
     var lmcCaptured = longMessageChains(code_matches,longMessageChainThreshold, lang)
     
+    var ifStatements = fetchCode(src_code,lang,'if_statement')
+    var switchStatements = fetchCode(src_code,lang,'switch_statement')
+    var ccCaptured = complexConditional(ifStatements, switchStatements, complexConditionalThreshold, lang)
+
     SmellDataBase.addSmell(curFile, lmCaptured, 'longMethod')
     SmellDataBase.addSmell(curFile, lpCaptured, 'longParameter')
     SmellDataBase.addSmell(curFile, lcCaptured, 'longClass')
     SmellDataBase.addSmell(curFile, lmcCaptured, 'longMessageChain')
+    SmellDataBase.addSmell(curFile, ccCaptured, 'complexConditional')
 
     SmellDataBase.generateCSV(out_path)
 
