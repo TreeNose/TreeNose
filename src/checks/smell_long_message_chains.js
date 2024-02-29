@@ -1,5 +1,3 @@
-const Parser = require('tree-sitter');
-
 const fs = require('fs');
 const Syntaxes = JSON.parse(fs.readFileSync('./configs/smell_categories.json', 'utf8'));
 
@@ -35,8 +33,15 @@ function checkDepthTooLong(node, threshold, targetNodes, depth = 1){
     if (depth > threshold){
         return true
     }
+
+    /* targetNodes is an array of syntaxes that we are looking for
+    *  We are checking syntaxes in a round-robin fashion
+    * For examples targetNodes = ['call_attribute','call']
+    * Then the check chain will be call_attribute -> call_attribute -> call
+    */
     const firstElement = targetNodes.shift();
     targetNodes.push(firstElement)
+
     for (let child of node.children){
         if (child.type == firstElement){
             return checkDepthTooLong(child, threshold, targetNodes, depth + 1)
