@@ -1,4 +1,4 @@
-const { fetchCode } = require('./checks/code_query')
+const { fetchCode } = require('./detectors/code_query')
 const fs_promise = require('fs/promises');
 const fs = require('fs');
 const args = require('yargs').argv
@@ -6,11 +6,11 @@ const parsee_path = args.path
 const out_path = args.out
 const lang = args.lang
 
-const { longMethods } = require('./checks/smell_long_method')
-const {longParameters} = require('./checks/smell_long_param')
-const {longClass} = require('./checks/smell_long_class')
-const {longMessageChains} = require('./checks/smell_long_message_chains')
-const {complexConditional} = require('./checks/smell_complex_conditional')
+const { longMethods } = require('./detectors/smell_long_method')
+const {longParameters} = require('./detectors/smell_long_param')
+const {longClass} = require('./detectors/smell_long_class')
+const {longMessageChains} = require('./detectors/smell_long_message_chains')
+const {complexConditional} = require('./detectors/smell_complex_conditional')
 
 const { walk } = require('./code_extractor')
 const {smellDB} = require('./report_generator')
@@ -56,11 +56,11 @@ async function runCodeSmellDetection(){
 
 function checkCodeSmells(src_code, lang, curFile){
 
-    // var code_matches = fetchCode(src_code,lang,'method_definition')
-    // var lmCaptured = longMethods(code_matches,longMethodThreshold)
+    var code_matches = fetchCode(src_code,lang,'method_definition')
+    var lmCaptured = longMethods(code_matches,longMethodThreshold)
  
-    // var code_matches = fetchCode(src_code,lang,'method_definition')
-    // var lpCaptured = longParameters(code_matches,longParameterThreshold,lang)
+    var code_matches = fetchCode(src_code,lang,'method_definition')
+    var lpCaptured = longParameters(code_matches,longParameterThreshold,lang)
 
     var code_matches = fetchCode(src_code,lang,'class_definition')
     var lcCaptured = longClass(code_matches,longClassThreshold_nol,longClassThreshold_noc,lang)
@@ -70,20 +70,20 @@ function checkCodeSmells(src_code, lang, curFile){
         console.log(curFile)
     }
 
-    // var code_matches = fetchCode(src_code,lang,'call')
-    // var lmcCaptured = longMessageChains(code_matches,longMessageChainThreshold, lang)
+    var code_matches = fetchCode(src_code,lang,'call')
+    var lmcCaptured = longMessageChains(code_matches,longMessageChainThreshold, lang)
     
-    // var ifStatements = fetchCode(src_code,lang,'if_statement')
-    // var switchStatements = fetchCode(src_code,lang,'switch_statement')
-    // var ccCaptured = complexConditional(ifStatements, switchStatements, complexConditionalThreshold, lang)
+    var ifStatements = fetchCode(src_code,lang,'if_statement')
+    var switchStatements = fetchCode(src_code,lang,'switch_statement')
+    var ccCaptured = complexConditional(ifStatements, switchStatements, complexConditionalThreshold, lang)
 
-    // SmellDataBase.addSmell(curFile, lmCaptured, 'longMethod')
-    // SmellDataBase.addSmell(curFile, lpCaptured, 'longParameter')
-    // SmellDataBase.addSmell(curFile, lcCaptured, 'longClass')
-    // SmellDataBase.addSmell(curFile, lmcCaptured, 'longMessageChain')
-    // SmellDataBase.addSmell(curFile, ccCaptured, 'complexConditional')
+    SmellDataBase.addSmell(curFile, lmCaptured, 'longMethod')
+    SmellDataBase.addSmell(curFile, lpCaptured, 'longParameter')
+    SmellDataBase.addSmell(curFile, lcCaptured, 'longClass')
+    SmellDataBase.addSmell(curFile, lmcCaptured, 'longMessageChain')
+    SmellDataBase.addSmell(curFile, ccCaptured, 'complexConditional')
 
-    // SmellDataBase.generateCSV(out_path)
+    SmellDataBase.generateCSV(out_path)
 
     return true
 }
