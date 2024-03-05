@@ -32,7 +32,7 @@ function complexConditional(ifs, switches, threshold, lang){
         const caseCount = findTargetNode(switchNode, targetNodes) + 1
         if (caseCount > threshold){
             // console.log(`Line ${switchNode.startPosition.row}: Complex conditional detected, found ${caseCount} conditional nodes, threshold is ${threshold}`)
-            complexConditionals.push([switchNode.startPosition.row, "complex conditional", threshold])
+            complexConditionals.push([switchNode.startPosition.row, "complex conditional", caseCount, threshold])
         }
     }
     return complexConditionals
