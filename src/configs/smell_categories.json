@@ -11,6 +11,50 @@
                 "call_expression"
             ]
         },
+        "if_statement": {
+            "python": [
+                "if_statement"
+            ],
+            "java": [
+                "if_statement"
+            ],
+            "javascript": [
+                "if_statement"
+            ]
+        },
+        "if_clause": {
+            "python": [
+                "if","elif"
+            ],
+            "java": [
+                "if"
+            ],
+            "javascript": [
+                "if"
+            ]
+        },
+        "switch_statement": {
+            "python": [
+                "match_statement"
+        ],
+            "java": [
+                "switch_expression"
+            ],
+            "javascript": [
+                "switch_statement"
+            ]
+        },
+        "switch_case": {
+            "python": [
+                "case_clause"
+            ],
+            "java": [
+                "switch_block_statement_group"
+            ],
+            "javascript": [
+                "switch_case"
+            ]
+        },
         "call_attribute": {
             "python": [
                 "attribute"
@@ -52,7 +96,8 @@
                 "method_definition",
                 "function_declaration",
                 "arrow_function",
-                "generator_function_declaration"
+                "generator_function_declaration",
+                "function"
             ],
             "java": [
                 "method_declaration"
