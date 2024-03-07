@@ -25,19 +25,19 @@ function longMessageChains(calls, threshold, lang){
     return longMessageChains
 }
 
-function checkDepthTooLong(node, threshold, targetNodes, depth = 1){
+function checkDepthTooLong(node, threshold, targetNodes, depth = 0){
     if (Visited[node]){
         return false
     }
     Visited[node] = true
-    if (depth > threshold){
+    if (Math.ceil(depth / targetNodes.length) > threshold){
         return true
     }
 
     /* targetNodes is an array of syntaxes that we are looking for
     *  We are checking syntaxes in a round-robin fashion
     * For examples targetNodes = ['call_attribute','call']
-    * Then the check chain will be call_attribute -> call_attribute -> call
+    * Then the check chain will be call_attribute -> call -> call_attribute -> call -> ...
     */
     const firstElement = targetNodes.shift();
     targetNodes.push(firstElement)
