@@ -22,7 +22,7 @@ function complexConditional(ifs, switches, threshold, lang){
         const ifCount = findTargetNode(ifNode, targetNodes) + 1
         if ( ifCount > threshold){
             // console.log(`Line ${ifNode.startPosition.row}: Complex conditional detected, found ${ifCount} conditional nodes, threshold is ${threshold}`)
-            complexConditionals.push([ifNode.startPosition.row, "complex conditional", ifCount, threshold])
+            complexConditionals.push([ifNode.startPosition.row, "complex conditional", 'long if', ifCount, threshold])
         }
     }
     for (let switchCapture of switches){
@@ -31,7 +31,7 @@ function complexConditional(ifs, switches, threshold, lang){
         const caseCount = findTargetNode(switchNode, targetNodes)
         if (caseCount > threshold){
             // console.log(`Line ${switchNode.startPosition.row}: Complex conditional detected, found ${caseCount} conditional nodes, threshold is ${threshold}`)
-            complexConditionals.push([switchNode.startPosition.row, "complex conditional", caseCount, threshold])
+            complexConditionals.push([switchNode.startPosition.row, "complex conditional", 'long switch', caseCount, threshold])
         }
     }
     return complexConditionals

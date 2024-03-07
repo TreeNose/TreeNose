@@ -52,7 +52,7 @@
                 "switch_block_statement_group"
             ],
             "javascript": [
-                "switch_case"
+                "switch_case", "switch_default"
             ]
         },
         "call_attribute": {
