@@ -28,8 +28,7 @@ function complexConditional(ifs, switches, threshold, lang){
     for (let switchCapture of switches){
         var switchNode = switchCapture.node
 
-        // default and else case are not counted, therefore we add 1 to the count
-        const caseCount = findTargetNode(switchNode, targetNodes) + 1
+        const caseCount = findTargetNode(switchNode, targetNodes)
         if (caseCount > threshold){
             // console.log(`Line ${switchNode.startPosition.row}: Complex conditional detected, found ${caseCount} conditional nodes, threshold is ${threshold}`)
             complexConditionals.push([switchNode.startPosition.row, "complex conditional", caseCount, threshold])

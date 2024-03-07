@@ -11,6 +11,8 @@ class smellDB{
         this.longParameterTitle = ['Line', 'Smell', 'Number of Parameters', 'Threshold', 'File']
         this.longMessageChainTitle = ['Line', 'Smell', 'Threshold', 'File']
         this.complexConditionalTitle = ['Line', 'Smell', 'Number of Conditions', 'Threshold', 'File']
+
+        this.offset = 1
     }
     /** 
      * Add smell to the database, if the smell is empty, return false
@@ -31,11 +33,21 @@ class smellDB{
         console.log(smells)
         
         if (smells[0].length != this[type + 'Title'].length){
+            console.log('1')
+            console.log(smells[0])
+            console.log(this[type + 'Title'])
             throw new Error('Smell and Title length mismatch');
         }
-
+        smells = this.addOffset(smells)
         this[type].push(...smells);
         return true;
+    }
+    
+    addOffset(matrix){
+        return matrix.map(row => {
+            row[0] = row[0] + this.offset
+            return row
+        })
     }
 
     getSmell(type){
