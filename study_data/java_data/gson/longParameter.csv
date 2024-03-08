@@ -1,0 +1,2 @@
+Line,Smell,Number of Parameters,Threshold,File
+177,long parameters,7,5,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java

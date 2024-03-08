@@ -1,0 +1,14 @@
+Line,Smell,Number of Lines,Threshold_nol,Number of Children,Threshold_noc,File
+121,long class,1164,200,100,20,../input_projects/js_projects/Chart.js/src/core/core.controller.js
+11,long class,172,200,21,20,../input_projects/js_projects/Chart.js/src/core/core.registry.js
+168,long class,1536,200,76,20,../input_projects/js_projects/Chart.js/src/core/core.scale.js
+158,long class,223,200,30,20,../input_projects/js_projects/Chart.js/src/core/core.config.js
+224,long class,841,200,60,20,../input_projects/js_projects/Chart.js/src/core/core.datasetController.js
+41,long class,512,200,24,20,../input_projects/js_projects/Chart.js/src/plugins/plugin.legend.js
+450,long class,760,200,33,20,../input_projects/js_projects/Chart.js/src/plugins/plugin.tooltip.js
+338,long class,346,200,25,20,../input_projects/js_projects/Chart.js/src/scales/scale.radialLinear.js
+199,long class,476,200,25,20,../input_projects/js_projects/Chart.js/src/scales/scale.time.js
+243,long class,202,200,12,20,../input_projects/js_projects/Chart.js/src/elements/element.line.js
+4,long class,223,200,14,20,../input_projects/js_projects/Chart.js/src/controllers/controller.polarArea.js
+37,long class,359,200,24,20,../input_projects/js_projects/Chart.js/src/controllers/controller.doughnut.js
+258,long class,398,200,18,20,../input_projects/js_projects/Chart.js/src/controllers/controller.bar.js

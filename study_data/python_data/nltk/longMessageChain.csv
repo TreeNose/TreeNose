@@ -1,0 +1,12 @@
+Line,Smell,Threshold,File
+506,long message chain,4,../input_projects/py_projects/nltk/nltk/parse/pchart.py
+516,long message chain,4,../input_projects/py_projects/nltk/nltk/parse/pchart.py
+388,long message chain,4,../input_projects/py_projects/nltk/nltk/parse/viterbi.py
+396,long message chain,4,../input_projects/py_projects/nltk/nltk/parse/viterbi.py
+442,long message chain,4,../input_projects/py_projects/nltk/nltk/stem/snowball.py
+1808,long message chain,4,../input_projects/py_projects/nltk/nltk/stem/snowball.py
+2167,long message chain,4,../input_projects/py_projects/nltk/nltk/stem/snowball.py
+3241,long message chain,4,../input_projects/py_projects/nltk/nltk/stem/snowball.py
+3296,long message chain,4,../input_projects/py_projects/nltk/nltk/stem/snowball.py
+3554,long message chain,4,../input_projects/py_projects/nltk/nltk/stem/snowball.py
+117,long message chain,4,../input_projects/py_projects/nltk/nltk/tag/hunpos.py

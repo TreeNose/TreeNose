@@ -1,0 +1,10 @@
+Line,Smell,Number of Lines,Threshold,File
+182,long method,116,100,../input_projects/java_projects/gson/gson/src/test/java/com/google/gson/reflect/TypeTokenTest.java
+343,long method,103,100,../input_projects/java_projects/gson/gson/src/test/java/com/google/gson/reflect/TypeTokenTest.java
+534,long method,135,100,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java
+720,long method,108,100,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/stream/JsonReader.java
+146,long method,162,100,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java
+177,long method,105,100,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+316,long method,109,100,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+82,long method,137,100,../input_projects/java_projects/gson/shrinker-test/src/test/java/com/google/gson/it/ShrinkingIT.java
+92,long method,120,100,../input_projects/java_projects/gson/extras/src/main/java/com/google/gson/graph/GraphAdapterBuilder.java

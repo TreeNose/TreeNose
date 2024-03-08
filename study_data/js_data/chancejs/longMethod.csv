@@ -1,0 +1,7 @@
+Line,Smell,Number of Lines,Threshold,File
+6,long method,7487,100,../input_projects/js_projects/chancejs/docs/chance.js
+1203,long method,105,100,../input_projects/js_projects/chancejs/docs/chance.js
+1512,long method,111,100,../input_projects/js_projects/chancejs/docs/chance.js
+6,long method,7948,100,../input_projects/js_projects/chancejs/chance.js
+1433,long method,105,100,../input_projects/js_projects/chancejs/chance.js
+1820,long method,112,100,../input_projects/js_projects/chancejs/chance.js

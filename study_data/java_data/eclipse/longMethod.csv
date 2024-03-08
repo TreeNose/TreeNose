@@ -1,0 +1,11 @@
+Line,Smell,Number of Lines,Threshold,File
+75,long method,189,100,../input_projects/java_projects/eclipse-collections-11.1.0/jmh-tests/src/main/java/org/eclipse/collections/impl/jmh/FunctionalInterfaceTest.java
+74,long method,189,100,../input_projects/java_projects/eclipse-collections-11.1.0/jmh-tests/src/main/java/org/eclipse/collections/impl/jmh/FunctionalInterfaceSetTest.java
+66,long method,123,100,../input_projects/java_projects/eclipse-collections-11.1.0/jmh-tests/src/main/java/org/eclipse/collections/impl/jmh/CountTest.java
+66,long method,123,100,../input_projects/java_projects/eclipse-collections-11.1.0/jmh-tests/src/main/java/org/eclipse/collections/impl/jmh/CountSetTest.java
+763,long method,104,100,../input_projects/java_projects/eclipse-collections-11.1.0/unit-tests/src/test/java/org/eclipse/collections/impl/map/mutable/UnifiedMapTest.java
+898,long method,104,100,../input_projects/java_projects/eclipse-collections-11.1.0/unit-tests/src/test/java/org/eclipse/collections/impl/map/strategy/mutable/UnifiedMapWithHashingStrategyTest.java
+355,long method,111,100,../input_projects/java_projects/eclipse-collections-11.1.0/unit-tests/src/test/java/org/eclipse/collections/impl/set/mutable/primitive/ByteHashSetTest.java
+582,long method,531,100,../input_projects/java_projects/eclipse-collections-11.1.0/unit-tests-java8/src/test/java/org/eclipse/collections/test/RichIterableTestCase.java
+1462,long method,104,100,../input_projects/java_projects/eclipse-collections-11.1.0/unit-tests-java8/src/test/java/org/eclipse/collections/test/RichIterableTestCase.java
+188,long method,275,100,../input_projects/java_projects/eclipse-collections-11.1.0/unit-tests-java8/src/test/java/org/eclipse/collections/test/RichIterableUniqueTestCase.java

@@ -1,0 +1,9 @@
+Line,Smell,Number of Parameters,Threshold,File
+1371,long parameters,7,5,../input_projects/js_projects/moment/moment.js
+2484,long parameters,6,5,../input_projects/js_projects/moment/moment.js
+1365,long parameters,7,5,../input_projects/js_projects/moment/dist/moment.js
+2478,long parameters,6,5,../input_projects/js_projects/moment/dist/moment.js
+1365,long parameters,7,5,../input_projects/js_projects/moment/min/moment-with-locales.js
+2478,long parameters,6,5,../input_projects/js_projects/moment/min/moment-with-locales.js
+1,long parameters,7,5,../input_projects/js_projects/moment/src/lib/create/date-from-array.js
+118,long parameters,6,5,../input_projects/js_projects/moment/src/lib/create/from-string.js

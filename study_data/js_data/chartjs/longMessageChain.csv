@@ -1,0 +1,23 @@
+Line,Smell,Threshold,File
+791,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/helpers.config.tests.js
+290,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.radialLinear.tests.js
+295,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.radialLinear.tests.js
+378,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.time.tests.js
+1239,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.time.tests.js
+1240,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.time.tests.js
+1277,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.time.tests.js
+1278,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.time.tests.js
+21,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/helpers.canvas.tests.js
+22,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/helpers.canvas.tests.js
+26,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/plugin.tooltip.tests.js
+30,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/plugin.tooltip.tests.js
+220,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/core.plugin.tests.js
+221,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/core.plugin.tests.js
+222,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/core.plugin.tests.js
+18,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.category.tests.js
+921,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.linear.tests.js
+926,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.linear.tests.js
+935,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.linear.tests.js
+936,long message chain,4,../input_projects/js_projects/Chart.js/test/specs/scale.linear.tests.js
+27,long message chain,4,../input_projects/js_projects/Chart.js/test/index.js
+35,long message chain,4,../input_projects/js_projects/Chart.js/test/fixtures/plugin.legend/borderRadius/legend-border-radius.js

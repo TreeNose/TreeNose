@@ -1,0 +1,18 @@
+Line,Smell,Threshold,File
+11,long message chain,4,../input_projects/js_projects/moment/tasks/transpile.js
+186,long message chain,4,../input_projects/js_projects/moment/tasks/transpile.js
+304,long message chain,4,../input_projects/js_projects/moment/tasks/transpile.js
+93,long message chain,4,../input_projects/js_projects/moment/locale/ar-ps.js
+86,long message chain,4,../input_projects/js_projects/moment/dist/locale/ar-ps.js
+121846,long message chain,4,../input_projects/js_projects/moment/min/tests.js
+121861,long message chain,4,../input_projects/js_projects/moment/min/tests.js
+122518,long message chain,4,../input_projects/js_projects/moment/min/tests.js
+122538,long message chain,4,../input_projects/js_projects/moment/min/tests.js
+131131,long message chain,4,../input_projects/js_projects/moment/min/tests.js
+6250,long message chain,4,../input_projects/js_projects/moment/min/moment-with-locales.js
+578,long message chain,4,../input_projects/js_projects/moment/min/locales.js
+446,long message chain,4,../input_projects/js_projects/moment/src/test/moment/create.js
+466,long message chain,4,../input_projects/js_projects/moment/src/test/moment/create.js
+223,long message chain,4,../input_projects/js_projects/moment/src/test/moment/getters_setters.js
+113,long message chain,4,../input_projects/js_projects/moment/src/test/moment/calendar.js
+128,long message chain,4,../input_projects/js_projects/moment/src/test/moment/calendar.js

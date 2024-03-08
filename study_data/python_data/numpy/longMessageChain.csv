@@ -1,0 +1,3 @@
+Line,Smell,Threshold,File
+1512,long message chain,4,../input_projects/py_projects/numpy/numpy/core/tests/test_nditer.py
+1541,long message chain,4,../input_projects/py_projects/numpy/numpy/core/tests/test_nditer.py
