@@ -60,7 +60,29 @@
                 "attribute"
             ],
             "java": [
-                ""
+                "field_access"
+            ],
+            "javascript": [
+                "member_expression"
+            ]
+        },
+        "walk_call_chains": {
+            "python": [
+                "attribute", "call"
+            ],
+            "java": [
+                "field_access", "method_invocation"
+            ],
+            "javascript": [
+                "member_expression", "call_expression"
+            ]
+        },
+        "check_call_chains": {
+            "python": [
+                "attribute"
+            ],
+            "java": [
+                "field_access", "method_invocation"
             ],
             "javascript": [
                 "member_expression"
