@@ -2,20 +2,20 @@ const fs = require('fs');
 const Syntaxes = JSON.parse(fs.readFileSync('./configs/smell_categories.json', 'utf8'));
 
 // Caution: order matters here. The program always check the first element and roate the array
-const TargetNodes = ['call_attribute','call']
+const walkCallChain = ["walk_call_chains"]
+const checkCallChain = ["check_call_chains"]
 
 var Visited = {}
 var checkedLines = []
 
-function longMessageChains(calls, threshold, lang){
+function longMessageChains(chains, threshold, lang){
     var longMessageChains = []
-    var langTargetNodesChain = TargetNodes.map(node => Syntaxes['grammar'][node][lang]).flat()
-    // Remove empty syntaxes
-    langTargetNodesChain = langTargetNodesChain.filter(node => node != "")
-    for (let single_call of calls){
+    const langWalkCallChainChain = walkCallChain.map(node => Syntaxes['grammar'][node][lang]).flat()
+    const langCheckCallChainChain = checkCallChain.map(node => Syntaxes['grammar'][node][lang]).flat()
+    for (let chain of chains){
         Visited = {}
-        callTooLong = checkDepthTooLong(single_call.node, threshold, langTargetNodesChain)
-        callLine = single_call.node.startPosition.row
+        callTooLong = checkDepthTooLong(chain.node, threshold, langWalkCallChainChain, langCheckCallChainChain)
+        callLine = chain.node.startPosition.row
         if (callTooLong && ! checkedLines.includes(callLine)){
             checkedLines.push(callLine)
             // console.log(`Line ${callLine}: Long message chain detected`)
@@ -25,26 +25,23 @@ function longMessageChains(calls, threshold, lang){
     return longMessageChains
 }
 
-function checkDepthTooLong(node, threshold, targetNodes, depth = 0){
+function checkDepthTooLong(node, threshold, walkCallChain, checkCallChain, depth = 1){
     if (Visited[node]){
         return false
     }
+    // console.log(depth)
+    // console.log(node.text)
     Visited[node] = true
-    if (Math.ceil(depth / targetNodes.length) > threshold){
+    if (depth > threshold){
         return true
     }
 
-    /* targetNodes is an array of syntaxes that we are looking for
-    *  We are checking syntaxes in a round-robin fashion
-    * For examples targetNodes = ['call_attribute','call']
-    * Then the check chain will be call_attribute -> call -> call_attribute -> call -> ...
-    */
-    const firstElement = targetNodes.shift();
-    targetNodes.push(firstElement)
-
     for (let child of node.children){
-        if (child.type == firstElement){
-            return checkDepthTooLong(child, threshold, targetNodes, depth + 1)
+        if (walkCallChain.includes(child.type)){
+            if (checkCallChain.includes(child.type)){
+                return checkDepthTooLong(child, threshold, walkCallChain, checkCallChain, depth+1)
+            }
+            return checkDepthTooLong(child, threshold, walkCallChain, checkCallChain, depth)
         }
     }
     return false
