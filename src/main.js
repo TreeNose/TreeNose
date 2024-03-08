@@ -34,7 +34,7 @@ const complexConditionalThreshold = detectConfig.complexConditional.threshold
 async function runCodeSmellDetection(){
     // for await (const target_file of walk('./example_codes/java_codes', '.java')){
     if (parsee_path == undefined || lang == undefined|| out_path == undefined){
-        console.log('Please provide a path, language and output dir to check for. e.g. node main.js --path=./example_codes/java_codes --lang=java --dest=./example_codes/csv/')
+        console.log('Please provide an input path, language and output dir to check: . e.g. node main.js --input=./example_codes/java_codes --lang=java --output=./example_codes/csv/')
         return
     }
 
