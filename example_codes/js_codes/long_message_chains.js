@@ -26,17 +26,5 @@ class MessageChain {
 
 // Example usage of the message chain
 const myMessage = new MessageChain('hello');
-myMessage.capitalize().addExclamation(1).reverse(4,5,6).display("wpw").wow();
-myMessage.capitalize().addExclamation().reverse("wow").display();
+myMessage.wow.wow.wow;
 assert.equal(obj.counter, 5);
-
-page.onInitialized = function() {
-    page.evaluate(function() {
-      document.addEventListener('DOMContentLoaded', function() {
-        QUnit.done(function(details) {
-          details.coverage = window.__coverage__;
-          callPhantom(details);
-        });
-      });
-    });
-  };

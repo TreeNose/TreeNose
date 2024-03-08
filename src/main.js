@@ -108,7 +108,7 @@ function detectLongClass(src_code, lang, curFile){
 }
 
 function detectLongMessageChains(src_code, lang, curFile){
-    var code_matches = fetchCode(src_code,lang,'call')
+    var code_matches = fetchCode(src_code,lang,'check_call_chains')
     var lmcCaptured = longMessageChains(code_matches,longMessageChainThreshold, lang)
     SmellDataBase.addSmell(curFile, lmcCaptured, 'longMessageChain')
 }

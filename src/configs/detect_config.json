@@ -10,7 +10,7 @@
         "threshold_noc": 20
     },
     "longMessageChain": {
-        "threshold": 4
+        "threshold": 3
     },
     "complexConditional": {
         "threshold": 3
