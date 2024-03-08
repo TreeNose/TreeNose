@@ -22,11 +22,4 @@ async function* walk(dir, extType) {
     }
 }
 
-// Then, use it with a simple async for loop
-async function main() {
-    for await (const p of walk('.', '.js'))
-        console.log(p)
-}
-
-
 module.exports = { walk }

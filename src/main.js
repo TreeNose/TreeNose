@@ -1,6 +1,9 @@
 const { fetchCode } = require('./detectors/code_query')
 const fs_promise = require('fs/promises');
 const fs = require('fs');
+const Parser = require('tree-sitter');
+const parser = new Parser();
+
 const args = require('yargs').argv
 const parsee_path = args.input
 const out_path = args.out
@@ -43,15 +46,24 @@ async function runCodeSmellDetection(){
         console.log(parsee_path)
         const src_code = fs.readFileSync(parsee_path, 'utf8')
         checkCodeSmells(src_code, lang, parsee_path)
-        return
+        SmellDataBase.fileCount = 1
+    } else{
+        // If the path is a directory, then walk through the directory and its subdirectories
+        for await (const target_file of walk(parsee_path, ExtConfig[lang])){
+            console.log(target_file)
+            const src_code = fs.readFileSync(target_file, 'utf8')
+            SmellDataBase.fileCount += 1
+
+            const targetLang = require(`tree-sitter-${lang}`);
+            parser.setLanguage(targetLang);
+            const tree = parser.parse(src_code);
+            const root = tree.rootNode
+            const fileloc = root.endPosition.row - root.startPosition.row + 1
+            SmellDataBase.loc += fileloc
+            checkCodeSmells(src_code, lang, target_file)
+        }
     }
-    
-    // If the path is a directory, then walk through the directory and its subdirectories
-    for await (const target_file of walk(parsee_path, ExtConfig[lang])){
-        console.log(target_file)
-        const src_code = fs.readFileSync(target_file, 'utf8')
-        checkCodeSmells(src_code, lang, target_file)
-    }
+    SmellDataBase.generateCSV(out_path)
 }
 
 
@@ -82,9 +94,6 @@ function checkCodeSmells(src_code, lang, curFile){
             }
         }
     }
-
-    SmellDataBase.generateCSV(out_path)
-
     return true
 }
 

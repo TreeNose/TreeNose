@@ -11,8 +11,11 @@ class smellDB{
         this.longParameterTitle = ['Line', 'Smell', 'Number of Parameters', 'Threshold', 'File']
         this.longMessageChainTitle = ['Line', 'Smell', 'Threshold', 'File']
         this.complexConditionalTitle = ['Line', 'Smell', 'Cause', 'Number of Conditions', 'Threshold', 'File']
+        this.packageInfTitle = ['Number of Files', 'Number of Lines']
 
         this.offset = 1
+        this.fileCount = 0
+        this.loc = 0
     }
     /** 
      * Add smell to the database, if the smell is empty, return false
@@ -86,12 +89,15 @@ class smellDB{
         const csv_lmc = this.arrayToCSV(lmc)
         const csv_cc = this.arrayToCSV(cc)
 
+        const csv_package = this.arrayToCSV([this.packageInfTitle, [this.fileCount, this.loc]])
+
         fs.writeFileSync(path.join(desDir, 'longClass') + csvExt, csv_lc, 'utf-8');
         fs.writeFileSync(path.join(desDir, 'longMethod') + csvExt, csv_lm, 'utf-8');
         fs.writeFileSync(path.join(desDir, 'longParameter') + csvExt, csv_lp, 'utf-8');
         fs.writeFileSync(path.join(desDir, 'longMessageChain') + csvExt, csv_lmc, 'utf-8');
         fs.writeFileSync(path.join(desDir, 'complexConditional') + csvExt, csv_cc, 'utf-8');
 
+        fs.writeFileSync(path.join(desDir, 'packageInfo') + csvExt, csv_package, 'utf-8');
         return true
     }
 
