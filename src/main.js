@@ -7,6 +7,7 @@ const out_path = args.out
 const lang = args.lang
 const smellArgv = require('yargs').array('smells').default('smells',['all']).argv;
 const targetSmells = smellArgv.smells
+const SupportedSmells = ['long-method', 'long-parameter', 'long-class', 'long-message-chain', 'complex-conditional']
 
 const { longMethods } = require('./detectors/smell_long_method')
 const {longParameters} = require('./detectors/smell_long_param')
@@ -29,15 +30,6 @@ const longMethodThreshold = detectConfig.longMethod.threshold
 const longParameterThreshold = detectConfig.longParameter.threshold
 const longMessageChainThreshold = detectConfig.longMessageChain.threshold
 const complexConditionalThreshold = detectConfig.complexConditional.threshold
-
-
-const smellMap = {
-    'long-method': 'longMethod',
-    'long-parameter': 'longParameter',
-    'long-class': 'longClass',
-    'long-message-chain': 'longMessageChains',
-    'complex-conditional': 'complexConditional'
-}
 
 async function runCodeSmellDetection(){
     // for await (const target_file of walk('./example_codes/java_codes', '.java')){
@@ -72,11 +64,22 @@ function checkCodeSmells(src_code, lang, curFile){
         detectLongMessageChains(src_code, lang, curFile)
         detectComplexConditional(src_code, lang, curFile)
     } else {
-        for (const smell of targetSmells){
-            if (! smellMap.hasOwnProperty(smell)){
-                throw new Error('Invalid smell name')
+        for (let smell of targetSmells){
+            if (SupportedSmells.includes(smell)){
+                if (smell == 'long-method'){
+                    detectLongMethod(src_code, lang, curFile)
+                } else if (smell == 'long-parameter'){
+                    detectLongParameter(src_code, lang, curFile)
+                } else if (smell == 'long-class'){
+                    detectLongClass(src_code, lang, curFile)
+                } else if (smell == 'long-message-chain'){
+                    detectLongMessageChains(src_code, lang, curFile)
+                } else if (smell == 'complex-conditional'){
+                    detectComplexConditional(src_code, lang, curFile)
+                }
+            }else{
+                throw new Error('Invalid smell provided')
             }
-            exec(`detect${smellMap[smell]}(src_code, lang, curFile)`)
         }
     }
 
