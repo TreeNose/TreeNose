@@ -1,0 +1,21 @@
+Line,Smell,Threshold,File
+49,long message chain,4,../input_projects/multi_projects/jython/installer/test/java/org/python/util/install/driver/StandaloneVerifierTest.java
+41,long message chain,4,../input_projects/multi_projects/jython/installer/test/java/org/apache/commons/cli/HelpFormatterExamples.java
+233,long message chain,4,../input_projects/multi_projects/jython/src/org/python/core/PySystemState.java
+1504,long message chain,4,../input_projects/multi_projects/jython/src/org/python/modules/posix/PosixModule.java
+75,long message chain,4,../input_projects/multi_projects/jython/src/org/python/modules/jffi/jffi.java
+82,long message chain,4,../input_projects/multi_projects/jython/src/org/python/modules/jffi/jffi.java
+48,long message chain,4,../input_projects/multi_projects/jython/src/org/python/modules/jffi/MemoryOp.java
+51,long message chain,4,../input_projects/multi_projects/jython/src/org/python/modules/jffi/MemoryOp.java
+332,long message chain,4,../input_projects/multi_projects/jython/src/org/python/compiler/Module.java
+335,long message chain,4,../input_projects/multi_projects/jython/src/org/python/compiler/Module.java
+339,long message chain,4,../input_projects/multi_projects/jython/src/org/python/compiler/Module.java
+342,long message chain,4,../input_projects/multi_projects/jython/src/org/python/compiler/Module.java
+21,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/types/NTupleType.java
+193,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/types/NType.java
+24,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/types/NDictType.java
+28,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/types/NFuncType.java
+22,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/types/NListType.java
+871,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/Indexer.java
+67,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/ast/NLambda.java
+153,long message chain,4,../input_projects/multi_projects/jython/src/org/python/indexer/demos/StyleApplier.java

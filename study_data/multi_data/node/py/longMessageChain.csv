@@ -1,0 +1,3 @@
+Line,Smell,Threshold,File
+22,long message chain,4,../input_projects/multi_projects/node/tools/inspector_protocol/markupsafe/_native.py
+21,long message chain,4,../input_projects/multi_projects/node/deps/v8/tools/testrunner/local/command.py

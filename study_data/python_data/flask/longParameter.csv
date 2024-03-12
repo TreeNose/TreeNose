@@ -1,0 +1,20 @@
+Line,Smell,Number of Parameters,Threshold,File
+1003,long parameters,6,5,../input_projects/py_projects/flask/tests/test_basic.py
+1527,long parameters,6,5,../input_projects/py_projects/flask/tests/test_basic.py
+1835,long parameters,7,5,../input_projects/py_projects/flask/tests/test_basic.py
+931,long parameters,6,5,../input_projects/py_projects/flask/tests/test_blueprints.py
+67,long parameters,7,5,../input_projects/py_projects/flask/docs/conf.py
+174,long parameters,12,5,../input_projects/py_projects/flask/src/flask/sansio/blueprints.py
+413,long parameters,6,5,../input_projects/py_projects/flask/src/flask/sansio/blueprints.py
+282,long parameters,11,5,../input_projects/py_projects/flask/src/flask/sansio/app.py
+609,long parameters,6,5,../input_projects/py_projects/flask/src/flask/sansio/app.py
+73,long parameters,6,5,../input_projects/py_projects/flask/src/flask/sansio/scaffold.py
+372,long parameters,6,5,../input_projects/py_projects/flask/src/flask/sansio/scaffold.py
+545,long parameters,7,5,../input_projects/py_projects/flask/src/flask/cli.py
+919,long parameters,9,5,../input_projects/py_projects/flask/src/flask/cli.py
+218,long parameters,11,5,../input_projects/py_projects/flask/src/flask/app.py
+499,long parameters,6,5,../input_projects/py_projects/flask/src/flask/app.py
+956,long parameters,9,5,../input_projects/py_projects/flask/src/flask/app.py
+48,long parameters,8,5,../input_projects/py_projects/flask/src/flask/testing.py
+176,long parameters,7,5,../input_projects/py_projects/flask/src/flask/helpers.py
+388,long parameters,8,5,../input_projects/py_projects/flask/src/flask/helpers.py

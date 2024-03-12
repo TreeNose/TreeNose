@@ -1,0 +1,10 @@
+Line,Smell,Threshold,File
+959,long message chain,4,../input_projects/multi_projects/zulip/web/third/marked/lib/marked.js
+1337,long message chain,4,../input_projects/multi_projects/zulip/web/third/marked/lib/marked.js
+409,long message chain,4,../input_projects/multi_projects/zulip/web/third/bootstrap-typeahead/typeahead.js
+939,long message chain,4,../input_projects/multi_projects/zulip/web/tests/search_suggestion.test.js
+109,long message chain,4,../input_projects/multi_projects/zulip/web/src/settings_panel_menu.js
+114,long message chain,4,../input_projects/multi_projects/zulip/web/src/settings_panel_menu.js
+537,long message chain,4,../input_projects/multi_projects/zulip/web/src/recent_view_ui.js
+88,long message chain,4,../input_projects/multi_projects/zulip/web/src/templates.js
+44,long message chain,4,../input_projects/multi_projects/zulip/web/src/copy_and_paste.js

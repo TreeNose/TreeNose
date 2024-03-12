@@ -1,0 +1,7 @@
+Line,Smell,Number of Lines,Threshold_nol,Number of Children,Threshold_noc,File
+8,long class,354,200,28,20,../input_projects/multi_projects/wagtail/client/src/includes/tabs.js
+17,long class,291,200,21,20,../input_projects/multi_projects/wagtail/client/src/components/InlinePanel/index.js
+110,long class,273,200,25,20,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/BaseSequenceBlock.js
+409,long class,280,200,29,20,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/BaseSequenceBlock.js
+188,long class,241,200,18,20,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/StreamBlock.js
+11,long class,576,200,46,20,../input_projects/multi_projects/wagtail/client/src/entrypoints/contrib/typed_table_block/typed_table_block.js

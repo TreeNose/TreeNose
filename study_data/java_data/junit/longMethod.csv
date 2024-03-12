@@ -1,0 +1,7 @@
+Line,Smell,Number of Lines,Threshold,File
+35,long method,122,100,../input_projects/java_projects/junit5/platform-tooling-support-tests/src/test/java/platform/tooling/support/tests/XmlAssertions.java
+27,long method,138,100,../input_projects/java_projects/junit5/platform-tooling-support-tests/src/test/java/platform/tooling/support/tests/GradleModuleFileTests.java
+181,long method,102,100,../input_projects/java_projects/junit5/junit-jupiter-params/src/test/java/org/junit/jupiter/params/ParameterizedTestExtensionTests.java
+244,long method,120,100,../input_projects/java_projects/junit5/junit-jupiter-engine/src/test/java/org/junit/jupiter/engine/TestInstanceLifecycleTests.java
+366,long method,118,100,../input_projects/java_projects/junit5/junit-jupiter-engine/src/test/java/org/junit/jupiter/engine/TestInstanceLifecycleTests.java
+486,long method,116,100,../input_projects/java_projects/junit5/junit-jupiter-engine/src/test/java/org/junit/jupiter/engine/TestInstanceLifecycleTests.java

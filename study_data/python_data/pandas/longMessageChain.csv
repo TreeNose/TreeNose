@@ -1,0 +1,25 @@
+Line,Smell,Threshold,File
+268,long message chain,4,../input_projects/py_projects/pandas/asv_bench/benchmarks/strings.py
+343,long message chain,4,../input_projects/py_projects/pandas/pandas/core/interchange/from_dataframe.py
+2378,long message chain,4,../input_projects/py_projects/pandas/pandas/io/formats/style_render.py
+332,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/series/accessors/test_dt_accessor.py
+418,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/resample/test_period_index.py
+1585,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/resample/test_datetime_index.py
+1594,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/resample/test_datetime_index.py
+92,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/io/formats/style/test_html.py
+549,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/io/formats/style/test_html.py
+570,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/io/formats/style/test_html.py
+591,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/io/formats/style/test_html.py
+516,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/io/pytables/test_append.py
+517,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/io/pytables/test_append.py
+385,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/groupby/test_timegrouper.py
+295,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/groupby/methods/test_describe.py
+48,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/groupby/transform/test_transform.py
+151,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/window/test_rolling_quantile.py
+168,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/window/test_rolling_quantile.py
+292,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/window/test_apply.py
+311,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/window/test_apply.py
+166,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/window/test_timeseries_window.py
+105,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/arrays/timedeltas/test_reductions.py
+253,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/arrays/sparse/test_accessor.py
+120,long message chain,4,../input_projects/py_projects/pandas/pandas/tests/indexes/period/test_period.py

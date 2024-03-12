@@ -1,0 +1,11 @@
+Line,Smell,Number of Lines,Threshold,File
+1518,long method,102,100,../input_projects/py_projects/pytest/testing/python/collect.py
+136,long method,129,100,../input_projects/py_projects/pytest/src/_pytest/terminal.py
+855,long method,116,100,../input_projects/py_projects/pytest/src/_pytest/assertion/rewrite.py
+514,long method,218,100,../input_projects/py_projects/pytest/src/_pytest/python_api.py
+786,long method,177,100,../input_projects/py_projects/pytest/src/_pytest/python_api.py
+1163,long method,182,100,../input_projects/py_projects/pytest/src/_pytest/python.py
+59,long method,185,100,../input_projects/py_projects/pytest/src/_pytest/main.py
+843,long method,119,100,../input_projects/py_projects/pytest/src/_pytest/main.py
+1290,long method,159,100,../input_projects/py_projects/pytest/src/_pytest/_py/path.py
+486,long method,123,100,../input_projects/py_projects/pytest/src/_pytest/pathlib.py

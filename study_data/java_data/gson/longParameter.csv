@@ -1,2 +1,6 @@
 Line,Smell,Number of Parameters,Threshold,File
+308,long parameters,6,5,../input_projects/java_projects/gson/gson/src/test/java/com/google/gson/functional/ParameterizedTypesTest.java
+159,long parameters,6,5,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java
+62,long parameters,6,5,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java
 177,long parameters,7,5,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+278,long parameters,21,5,../input_projects/java_projects/gson/gson/src/main/java/com/google/gson/Gson.java

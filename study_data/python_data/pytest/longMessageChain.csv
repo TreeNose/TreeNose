@@ -1,0 +1,4 @@
+Line,Smell,Threshold,File
+51,long message chain,4,../input_projects/py_projects/pytest/testing/test_assertrewrite.py
+1869,long message chain,4,../input_projects/py_projects/pytest/testing/test_config.py
+1970,long message chain,4,../input_projects/py_projects/pytest/testing/test_config.py

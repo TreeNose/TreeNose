@@ -1,0 +1,8 @@
+Line,Smell,Number of Lines,Threshold_nol,Number of Children,Threshold_noc,File
+225,long class,329,200,19,20,../input_projects/multi_projects/zulip/web/src/unread.js
+18,long class,514,200,47,20,../input_projects/multi_projects/zulip/web/src/message_list.js
+256,long class,1443,200,59,20,../input_projects/multi_projects/zulip/web/src/message_list_view.js
+24,long class,324,200,24,20,../input_projects/multi_projects/zulip/web/src/dropdown_widget.js
+9,long class,584,200,60,20,../input_projects/multi_projects/zulip/web/src/message_list_data.js
+56,long class,260,200,17,20,../input_projects/multi_projects/zulip/web/src/buddy_list.js
+192,long class,961,200,69,20,../input_projects/multi_projects/zulip/web/src/filter.js

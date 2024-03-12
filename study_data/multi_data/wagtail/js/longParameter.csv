@@ -1,0 +1,11 @@
+Line,Smell,Number of Parameters,Threshold,File
+111,long parameters,8,5,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/BaseSequenceBlock.js
+411,long parameters,8,5,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/BaseSequenceBlock.js
+319,long parameters,8,5,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/StreamBlock.js
+30,long parameters,6,5,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/FieldBlock.test.js
+11,long parameters,6,5,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/FieldBlock.test.js
+157,long parameters,8,5,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/ListBlock.js
+8,long parameters,6,5,../input_projects/multi_projects/wagtail/client/src/components/StreamField/blocks/FieldBlock.js
+5,long parameters,6,5,../input_projects/multi_projects/wagtail/client/src/entrypoints/admin/telepath/widgets.js
+60,long parameters,6,5,../input_projects/multi_projects/wagtail/client/src/entrypoints/admin/telepath/widgets.js
+375,long parameters,6,5,../input_projects/multi_projects/wagtail/client/src/entrypoints/admin/telepath/widgets.js

@@ -1,0 +1,6 @@
+Line,Smell,Number of Lines,Threshold_nol,Number of Children,Threshold_noc,File
+119,long class,513,200,32,20,../input_projects/py_projects/flask/src/flask/sansio/blueprints.py
+59,long class,909,200,33,20,../input_projects/py_projects/flask/src/flask/sansio/app.py
+51,long class,651,200,30,20,../input_projects/py_projects/flask/src/flask/sansio/scaffold.py
+52,long class,320,200,9,20,../input_projects/py_projects/flask/src/flask/config.py
+79,long class,1409,200,34,20,../input_projects/py_projects/flask/src/flask/app.py

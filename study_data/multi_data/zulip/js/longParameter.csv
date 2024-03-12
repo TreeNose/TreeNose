@@ -1,0 +1,6 @@
+Line,Smell,Number of Parameters,Threshold,File
+1257,long parameters,6,5,../input_projects/multi_projects/zulip/web/src/message_edit.js
+491,long parameters,7,5,../input_projects/multi_projects/zulip/web/src/click_handlers.js
+173,long parameters,6,5,../input_projects/multi_projects/zulip/web/src/message_viewport.js
+1462,long parameters,8,5,../input_projects/multi_projects/zulip/web/src/message_list_view.js
+309,long parameters,8,5,../input_projects/multi_projects/zulip/web/src/user_card_popover.js

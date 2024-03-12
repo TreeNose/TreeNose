@@ -1,0 +1,8 @@
+Line,Smell,Number of Lines,Threshold,File
+273,long method,104,100,../input_projects/py_projects/flask/src/flask/sansio/blueprints.py
+282,long method,133,100,../input_projects/py_projects/flask/src/flask/sansio/app.py
+73,long method,146,100,../input_projects/py_projects/flask/src/flask/sansio/scaffold.py
+499,long method,121,100,../input_projects/py_projects/flask/src/flask/app.py
+956,long method,124,100,../input_projects/py_projects/flask/src/flask/app.py
+1082,long method,139,100,../input_projects/py_projects/flask/src/flask/app.py
+388,long method,123,100,../input_projects/py_projects/flask/src/flask/helpers.py

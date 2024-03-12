@@ -1,0 +1,14 @@
+Line,Smell,Threshold,File
+259,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/test/test_urllib2net.py
+270,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/test/test_urllib2net.py
+281,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/test/test_urllib2net.py
+287,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/test/test_urllib2net.py
+2014,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/difflib.py
+323,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/xml/dom/expatbuilder.py
+329,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/xml/dom/expatbuilder.py
+98,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/idlelib/CallTips.py
+179,long message chain,4,../input_projects/multi_projects/jython/lib-python/2.7/idlelib/AutoComplete.py
+36,long message chain,4,../input_projects/multi_projects/jython/Lib/test/test_socket.py
+265,long message chain,4,../input_projects/multi_projects/jython/Lib/test/test_urllib2net.py
+276,long message chain,4,../input_projects/multi_projects/jython/Lib/test/test_urllib2net.py
+293,long message chain,4,../input_projects/multi_projects/jython/Lib/test/test_urllib2net.py

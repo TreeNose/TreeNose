@@ -1,6 +1,0 @@
-Line,Smell,Number of Parameters,Threshold,File
-2141,long parameters,6,5,../input_projects/js_projects/riot/riot+compiler.js
-16862,long parameters,6,5,../input_projects/js_projects/riot/riot+compiler.js
-19033,long parameters,6,5,../input_projects/js_projects/riot/riot+compiler.js
-19147,long parameters,7,5,../input_projects/js_projects/riot/riot+compiler.js
-19636,long parameters,8,5,../input_projects/js_projects/riot/riot+compiler.js

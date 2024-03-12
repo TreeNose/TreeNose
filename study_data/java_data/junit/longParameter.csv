@@ -1,0 +1,23 @@
+Line,Smell,Number of Parameters,Threshold,File
+28,long parameters,6,5,../input_projects/java_projects/junit5/junit-platform-engine/src/main/java/org/junit/platform/engine/support/hierarchical/DefaultParallelExecutionConfiguration.java
+296,long parameters,6,5,../input_projects/java_projects/junit5/junit-platform-commons/src/main/java/org/junit/platform/commons/util/AnnotationUtils.java
+327,long parameters,6,5,../input_projects/java_projects/junit5/junit-platform-commons/src/main/java/org/junit/platform/commons/util/AnnotationUtils.java
+146,long parameters,10,5,../input_projects/java_projects/junit5/junit-jupiter-params/src/test/java/org/junit/jupiter/params/provider/ValueArgumentsProviderTests.java
+67,long parameters,8,5,../input_projects/java_projects/junit5/junit-jupiter-params/src/test/java/org/junit/jupiter/params/ParameterizedTestMethodContextTests.java
+58,long parameters,8,5,../input_projects/java_projects/junit5/junit-jupiter-params/src/main/java/org/junit/jupiter/params/provider/CsvParserFactory.java
+65,long parameters,8,5,../input_projects/java_projects/junit5/junit-jupiter-params/src/main/java/org/junit/jupiter/params/provider/CsvParserFactory.java
+54,long parameters,6,5,../input_projects/java_projects/junit5/junit-platform-launcher/src/main/java/org/junit/platform/launcher/core/DefaultDiscoveryRequest.java
+41,long parameters,10,5,../input_projects/java_projects/junit5/junit-platform-launcher/src/main/java/org/junit/platform/launcher/core/DefaultLauncherConfig.java
+79,long parameters,7,5,../input_projects/java_projects/junit5/junit-platform-launcher/src/main/java/org/junit/platform/launcher/TestIdentifier.java
+244,long parameters,7,5,../input_projects/java_projects/junit5/junit-platform-launcher/src/main/java/org/junit/platform/launcher/listeners/MutableTestExecutionSummary.java
+604,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/test/java/org/junit/jupiter/engine/TestInstanceLifecycleTests.java
+124,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/test/java/org/junit/jupiter/engine/TestInstanceLifecycleConfigurationTests.java
+237,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/extension/TempDirectory.java
+85,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/TestMethodTestDescriptor.java
+35,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/MethodExtensionContext.java
+46,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/TestTemplateInvocationTestDescriptor.java
+32,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/TestTemplateExtensionContext.java
+43,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/ClassExtensionContext.java
+51,long parameters,7,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/ClassExtensionContext.java
+139,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/TestFactoryTestDescriptor.java
+39,long parameters,6,5,../input_projects/java_projects/junit5/junit-jupiter-engine/src/main/java/org/junit/jupiter/engine/descriptor/DynamicContainerTestDescriptor.java

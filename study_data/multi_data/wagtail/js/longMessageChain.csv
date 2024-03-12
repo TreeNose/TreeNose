@@ -1,0 +1,16 @@
+Line,Smell,Threshold,File
+79,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/images/static_src/wagtailimages/js/add-multiple.js
+91,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/images/static_src/wagtailimages/js/add-multiple.js
+32,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/images/static_src/wagtailimages/js/vendor/jquery.fileupload-validate.js
+39,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/images/static_src/wagtailimages/js/vendor/jquery.fileupload-image.js
+692,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/admin/static_src/wagtailadmin/js/vendor/jquery.datetimepicker.js
+1083,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/admin/static_src/wagtailadmin/js/vendor/jquery.datetimepicker.js
+2326,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/admin/static_src/wagtailadmin/js/vendor/jquery.datetimepicker.js
+2375,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/admin/static_src/wagtailadmin/js/vendor/jquery.datetimepicker.js
+2592,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/admin/static_src/wagtailadmin/js/vendor/jquery.datetimepicker.js
+177,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/admin/static_src/wagtailadmin/js/vendor/tag-it.js
+64,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/documents/static_src/wagtaildocs/js/add-multiple.js
+76,long message chain,4,../input_projects/multi_projects/wagtail/wagtail/documents/static_src/wagtaildocs/js/add-multiple.js
+5,long message chain,4,../input_projects/multi_projects/wagtail/client/src/entrypoints/admin/date-time-chooser.js
+215,long message chain,4,../input_projects/multi_projects/wagtail/client/src/entrypoints/contrib/typed_table_block/typed_table_block.js
+326,long message chain,4,../input_projects/multi_projects/wagtail/client/src/entrypoints/contrib/typed_table_block/typed_table_block.js

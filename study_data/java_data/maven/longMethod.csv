@@ -17,6 +17,7 @@ Line,Smell,Number of Lines,Threshold,File
 180,long method,503,100,../input_projects/java_projects/maven-3-9-6/maven-artifact/src/test/java/org/apache/maven/artifact/versioning/VersionRangeTest.java
 291,long method,103,100,../input_projects/java_projects/maven-3-9-6/maven-artifact/src/main/java/org/apache/maven/artifact/versioning/VersionRange.java
 104,long method,101,100,../input_projects/java_projects/maven-3-9-6/maven-embedder/src/test/java/org/apache/maven/cli/transfer/FileSizeFormatTest.java
+112,long method,183,100,../input_projects/java_projects/maven-3-9-6/maven-embedder/src/main/java/org/apache/maven/cli/CLIManager.java
 1195,long method,245,100,../input_projects/java_projects/maven-3-9-6/maven-embedder/src/main/java/org/apache/maven/cli/MavenCli.java
 108,long method,199,100,../input_projects/java_projects/maven-3-9-6/maven-plugin-api/src/main/java/org/apache/maven/plugin/descriptor/PluginDescriptorBuilder.java
 386,long method,128,100,../input_projects/java_projects/maven-3-9-6/maven-core/src/test/java/org/apache/maven/lifecycle/LifecycleExecutorTest.java
@@ -31,4 +32,5 @@ Line,Smell,Number of Lines,Threshold,File
 660,long method,203,100,../input_projects/java_projects/maven-3-9-6/maven-core/src/main/java/org/apache/maven/project/DefaultProjectBuilder.java
 151,long method,134,100,../input_projects/java_projects/maven-3-9-6/maven-core/src/main/java/org/apache/maven/project/artifact/MavenMetadataSource.java
 529,long method,149,100,../input_projects/java_projects/maven-3-9-6/maven-core/src/main/java/org/apache/maven/project/artifact/MavenMetadataSource.java
+75,long method,122,100,../input_projects/java_projects/maven-3-9-6/maven-core/src/main/java/org/apache/maven/project/ProjectSorter.java
 134,long method,114,100,../input_projects/java_projects/maven-3-9-6/maven-core/src/main/java/org/apache/maven/project/DefaultProjectBuildingHelper.java

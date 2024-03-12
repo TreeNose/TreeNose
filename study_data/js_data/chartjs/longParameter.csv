@@ -1,3 +1,0 @@
-Line,Smell,Number of Parameters,Threshold,File
-148,long parameters,6,5,../input_projects/js_projects/Chart.js/src/core/core.interaction.js
-189,long parameters,6,5,../input_projects/js_projects/Chart.js/src/core/core.interaction.js

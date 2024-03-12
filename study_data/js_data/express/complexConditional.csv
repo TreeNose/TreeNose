@@ -1,0 +1,14 @@
+Line,Smell,Cause,Number of Conditions,Threshold,File
+36,complex conditional,long switch,7,3,../input_projects/js_projects/express/examples/mvc/lib/boot.js
+155,complex conditional,long if,4,3,../input_projects/js_projects/express/lib/response.js
+184,complex conditional,long if,4,3,../input_projects/js_projects/express/lib/response.js
+329,complex conditional,long if,4,3,../input_projects/js_projects/express/lib/response.js
+778,complex conditional,long if,6,3,../input_projects/js_projects/express/lib/response.js
+1152,complex conditional,long if,6,3,../input_projects/js_projects/express/lib/response.js
+145,complex conditional,long switch,8,3,../input_projects/js_projects/express/lib/response.js
+1154,complex conditional,long switch,4,3,../input_projects/js_projects/express/lib/response.js
+157,complex conditional,long switch,5,3,../input_projects/js_projects/express/lib/utils.js
+189,complex conditional,long switch,5,3,../input_projects/js_projects/express/lib/utils.js
+584,complex conditional,long if,4,3,../input_projects/js_projects/express/lib/application.js
+294,complex conditional,long if,5,3,../input_projects/js_projects/express/lib/router/index.js
+113,complex conditional,long if,4,3,../input_projects/js_projects/express/lib/router/layer.js
