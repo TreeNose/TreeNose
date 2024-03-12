@@ -122,7 +122,7 @@
                 "function"
             ],
             "java": [
-                "method_declaration"
+                "method_declaration", "constructor_declaration"
             ]
         },
         "parameters": {
