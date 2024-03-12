@@ -1,0 +1,2 @@
+Line,Smell,Number of Parameters,Threshold,File
+279,long parameters,7,5,../input_projects/js_projects/node_cli/test/lib/utils/reify-output.js

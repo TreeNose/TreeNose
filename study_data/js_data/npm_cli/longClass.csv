@@ -1,0 +1,27 @@
+Line,Smell,Number of Lines,Threshold_nol,Number of Children,Threshold_noc,File
+58,long class,276,200,23,20,../input_projects/js_projects/node_cli/test/fixtures/sandbox.js
+7,long class,412,200,41,20,../input_projects/js_projects/node_cli/mock-registry/lib/index.js
+75,long class,827,200,47,20,../input_projects/js_projects/node_cli/workspaces/config/lib/index.js
+25,long class,542,200,19,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/place-dep.js
+17,long class,626,200,63,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/query-selector-all.js
+36,long class,263,200,25,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/edge.js
+20,long class,333,200,16,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/audit-report.js
+181,long class,993,200,39,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/shrinkwrap.js
+68,long class,1403,200,76,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/node.js
+90,long class,252,200,18,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/yarn-lock.js
+49,long class,385,200,23,20,../input_projects/js_projects/node_cli/workspaces/arborist/lib/can-place-dep.js
+20,long class,464,200,71,20,../input_projects/js_projects/node_cli/lib/npm.js
+14,long class,222,200,15,20,../input_projects/js_projects/node_cli/lib/utils/log-file.js
+39,long class,367,200,11,20,../input_projects/js_projects/node_cli/lib/commands/profile.js
+18,long class,212,200,11,20,../input_projects/js_projects/node_cli/lib/commands/owner.js
+20,long class,227,200,10,20,../input_projects/js_projects/node_cli/lib/commands/run-script.js
+18,long class,206,200,17,20,../input_projects/js_projects/node_cli/lib/commands/fund.js
+51,long class,325,200,17,20,../input_projects/js_projects/node_cli/lib/commands/config.js
+16,long class,380,200,24,20,../input_projects/js_projects/node_cli/lib/commands/audit.js
+10,long class,218,200,20,20,../input_projects/js_projects/node_cli/lib/commands/token.js
+16,long class,229,200,9,20,../input_projects/js_projects/node_cli/lib/commands/init.js
+12,long class,356,200,19,20,../input_projects/js_projects/node_cli/lib/commands/outdated.js
+22,long class,205,200,4,20,../input_projects/js_projects/node_cli/lib/commands/publish.js
+101,long class,316,200,25,20,../input_projects/js_projects/node_cli/lib/commands/doctor.js
+18,long class,430,200,20,20,../input_projects/js_projects/node_cli/lib/commands/view.js
+11,long class,278,200,10,20,../input_projects/js_projects/node_cli/lib/commands/diff.js
