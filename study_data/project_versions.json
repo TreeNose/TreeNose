@@ -1,0 +1,33 @@
+{
+    "java":{
+        "eclipse":"11.1.0",
+        "gson": "2.10",
+        "maven": "3.9.3",
+        "spring-framework": "5.3.32",
+        "junit": "5.10.0",
+        "netty": "4.1.68"
+    },
+    "python":{
+        "django": "1.8.2",
+        "numpy": "v1.9.2",
+        "nltk": "3.0.2",
+        "pandas": "2.2.1",
+        "pytest": "8.1.1",
+        "flask": "3.0.2"
+    },
+    "javascript":{
+        "chartjs": "v3.3.0",
+        "moment": "2.30.0",
+        "lodash":"4.0.0",
+        "chancejs": "1.1.0",
+        "riot": "v9.1.0",
+        "express":"4.18.3"
+
+    },
+    "multiLang":{
+        "zulip":"8.0",
+        "nodejs":"v21.7.0",
+        "wagtail": "6.0.0",
+        "jpython": "v2.7.3"
+    }
+}
