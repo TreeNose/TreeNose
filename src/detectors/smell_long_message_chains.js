@@ -16,21 +16,21 @@ var checkedLines = []
  * @param {String} lang - Language of the source code
  * @returns {Array} - Array of formatted long message chain reports
  * */
-function longMessageChains(chains, threshold, lang){
+function longMessageChains(chains, threshold, lang) {
     var longMessageChains = []
 
     // get language specific nodes for the call chain
     const langWalkCallChainChain = walkCallChain.map(node => Syntaxes['grammar'][node][lang]).flat()
     const langCheckCallChainChain = checkCallChain.map(node => Syntaxes['grammar'][node][lang]).flat()
 
-    for (let chain of chains){
+    for (let chain of chains) {
         Visited = {}
         // check if the call chain is too long
         callTooLong = checkDepthTooLong(chain.node, threshold, langWalkCallChainChain, langCheckCallChainChain)
         callLine = chain.node.startPosition.row
 
         // if chain too long, report the line the chain starts
-        if (callTooLong && ! checkedLines.includes(callLine)){
+        if (callTooLong && !checkedLines.includes(callLine)) {
             checkedLines.push(callLine)
             // console.log(`Line ${callLine}: Long message chain detected`)
             longMessageChains.push([callLine, "long message chain", threshold])
@@ -48,10 +48,10 @@ function longMessageChains(chains, threshold, lang){
  * @param {Number} depth - Current depth of the call chain
  * @returns {Boolean} - True if the call chain is too long, False otherwise
  * */
-function checkDepthTooLong(node, threshold, walkCallChain, checkCallChain, depth = 1){
+function checkDepthTooLong(node, threshold, walkCallChain, checkCallChain, depth = 1) {
 
     // if the node has been visited, then it's not too long or it has been reported
-    if (Visited[node]){
+    if (Visited[node]) {
         return false
     }
     // console.log(depth)
@@ -59,16 +59,16 @@ function checkDepthTooLong(node, threshold, walkCallChain, checkCallChain, depth
     Visited[node] = true
 
     // if the depth is too long, return true
-    if (depth > threshold){
+    if (depth > threshold) {
         return true
     }
 
-    for (let child of node.children){
-        
+    for (let child of node.children) {
+
         // if the child is in the walkCallChain, then visit the child
-        if (walkCallChain.includes(child.type)){
+        if (walkCallChain.includes(child.type)) {
             // if the child is in the checkCallChain, depth + 1
-            if (checkCallChain.includes(child.type)){
+            if (checkCallChain.includes(child.type)) {
                 depth += 1
             }
             // if the child is not in the checkCallChain, depth remains the same depth

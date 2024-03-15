@@ -8,10 +8,10 @@ const { fetchCode } = require('./code_query')
  * @param {String} lang - Language of the source code
  * @returns {Array} - Array of formatted long class reports
  * */
-function longClass(classes, nol_threshold, noc_threshold, lang){
+function longClass(classes, nol_threshold, noc_threshold, lang) {
     var longClassSmells = []
 
-    for (let cls of classes){
+    for (let cls of classes) {
         clsNode = cls.node
 
         // nol: Number of line
@@ -22,7 +22,7 @@ function longClass(classes, nol_threshold, noc_threshold, lang){
         const startLine = clsNode.startPosition.row
 
         // check if the class is long or has many child methods
-        if (nol > nol_threshold || noc > noc_threshold){
+        if (nol > nol_threshold || noc > noc_threshold) {
             // console.log(`Line ${clsNode.startPosition.row}: Class is longer than ${nol_threshold} lines (found ${nol} lines)`)
             // console.log(`Line ${startLine}: Class has more than ${noc_threshold} children (found ${noc} children)`)
             longClassSmells.push([startLine, "long class", nol, nol_threshold, noc, noc_threshold])
@@ -37,7 +37,7 @@ function longClass(classes, nol_threshold, noc_threshold, lang){
  * @param {Object} clsNode - The class node to check
  * @returns {Number} - Number of lines of the class
  * */
-function checkNumberOfLine(clsNode){
+function checkNumberOfLine(clsNode) {
     return clsNode.endPosition.row - clsNode.startPosition.row
 }
 
@@ -47,11 +47,11 @@ function checkNumberOfLine(clsNode){
  * @param {String} lang: Language of the source code
  * @returns {Number} - Number of child methods of the class
  */
-function checkNumberOfChildren(clsNode, lang){
+function checkNumberOfChildren(clsNode, lang) {
     // Doc: currently only support method_definition as children
     const captures = fetchCode(clsNode.text, lang, "method_definition")
     // Get the number of unique child methods
-    const noc = new Set(captures.map((x)=>x.node.text)).size
+    const noc = new Set(captures.map((x) => x.node.text)).size
     return noc
 }
 

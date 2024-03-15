@@ -10,7 +10,7 @@ const Syntaxes = JSON.parse(fs.readFileSync('./configs/smell_categories.json', '
  * @param {string} smell: The smell to search for
  * @returns {Array} The code snippets that match the smell
  */
-function fetchCode (sourceCode, lang, smell) {
+function fetchCode(sourceCode, lang, smell) {
     var matches = []
 
     // Set the tree-sitter parser to the target language
@@ -22,10 +22,10 @@ function fetchCode (sourceCode, lang, smell) {
     const syntax_specific_smells = Syntaxes["grammar"][smell][lang]
 
     // Query the tree for the syntax specific smells
-    for (let s of syntax_specific_smells){
-        const query = new Parser.Query(targetLang,`(${s}) @${smell}`);
+    for (let s of syntax_specific_smells) {
+        const query = new Parser.Query(targetLang, `(${s}) @${smell}`);
 
-        captures = query.matches(tree.rootNode).map((x)=>x.captures)
+        captures = query.matches(tree.rootNode).map((x) => x.captures)
         matches.push(captures.flat())
     }
 

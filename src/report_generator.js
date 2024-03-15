@@ -1,6 +1,6 @@
 // Description: This file contains the class smellDB, which is used to store the smells and generate the CSV report
-class smellDB{
-    constructor(){
+class smellDB {
+    constructor() {
         this.longClass = []
         this.longMethod = []
         this.longParameter = []
@@ -25,21 +25,21 @@ class smellDB{
      * @param {String} type the type of smell
      * @returns {Boolean} true if the smell is added, false if the smell is empty
      **/
-    addSmell(fileName, smells, type){
+    addSmell(fileName, smells, type) {
 
-        if (smells.length <= 0){
+        if (smells.length <= 0) {
             return false;
-        } 
+        }
 
         // Add the filename to the last column of each row
         smells = this.addFileName(fileName, smells)
-        
+
         console.log('-------------------')
         console.log(type)
         console.log(smells)
-        
+
         // The length of smell report and title length mismatch, the data is not valid
-        if (smells[0].length != this[type + 'Title'].length){
+        if (smells[0].length != this[type + 'Title'].length) {
             // console.log(smells[0])
             // console.log(this[type + 'Title'])
             throw new Error('Smell and Title length mismatch');
@@ -48,26 +48,26 @@ class smellDB{
         this[type].push(...smells);
         return true;
     }
-    
+
     /**
      * Add the offset to the line number column, the first column of each row
      * @param {Array} matrix: the smell database
      * @returns {Array} the smell database with the offset added
      */
-    addOffset(matrix){
+    addOffset(matrix) {
         return matrix.map(row => {
             row[0] = row[0] + this.offset
             return row
         })
     }
-    
+
     /**
      * Get single type of smell database with the titles
      * @param {String} type: the type of smell
      * @returns {Array} the smell database with the titles
      */
-    getSmell(type){
-        return [this[type+'Title']].concat(this[type]);
+    getSmell(type) {
+        return [this[type + 'Title']].concat(this[type]);
     }
 
     /**
@@ -76,7 +76,7 @@ class smellDB{
      * @param {Array} smells 
      * @returns {Array} the smell database with the filename added
      */
-    addFileName(fileName, smells){
+    addFileName(fileName, smells) {
 
         var smellsWithFile = smells.map(row => {
             row.push(fileName)
@@ -91,7 +91,7 @@ class smellDB{
      * @param {String} desDir the destination directory
      * @returns {Boolean} true if the CSV is generated
     */
-    generateCSV(desDir){
+    generateCSV(desDir) {
         const fs = require('fs');
         const path = require('path');
         const csvExt = '.csv'
@@ -102,7 +102,7 @@ class smellDB{
         const lp = this.getSmell('longParameter')
         const lmc = this.getSmell('longMessageChain')
         const cc = this.getSmell('complexConditional')
-        
+
         // Generate the CSV from double array
         const csv_lc = this.arrayToCSV(lc)
         const csv_lm = this.arrayToCSV(lm)
@@ -126,10 +126,10 @@ class smellDB{
      * @param {Array} arr the double array
      * @returns {String} the CSV style string
      */
-    arrayToCSV(arr){
+    arrayToCSV(arr) {
         const report = arr.map(row => row.join(',')).join('\n');
         return report
     }
 }
 
-module.exports = {smellDB}
+module.exports = { smellDB }

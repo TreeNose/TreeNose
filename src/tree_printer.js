@@ -13,39 +13,40 @@ const parser = new Parser();
 parser.setLanguage(TargetLang);
 
 async function printTree() {
-    try {
-        // Read the source code from the file and get the syntax tree
-        const sourceCode = await fs.readFile(parsee_file, { encoding: 'utf8' });
-        const tree = parser.parse(sourceCode);
+  try {
+    // Read the source code from the file and get the syntax tree
+    const sourceCode = await fs.readFile(parsee_file, { encoding: 'utf8' });
+    const tree = parser.parse(sourceCode);
 
-        // Get string representation of the tree
-        const a = recursivelyLog(tree.rootNode)
-        console.log(a.join())
-    } catch (err) {
-      console.log(err);
-    }}
+    // Get string representation of the tree
+    const a = recursivelyLog(tree.rootNode)
+    console.log(a.join())
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 // Recursively log the tree
-function recursivelyLog(tree_node,indent_count = 0){
-    var indentation = '\t'
-    var codeStructures = [];
+function recursivelyLog(tree_node, indent_count = 0) {
+  var indentation = '\t'
+  var codeStructures = [];
 
-    // Iterate over the children of current node
-    for (var i = 0; i < tree_node.childCount; i++){
+  // Iterate over the children of current node
+  for (var i = 0; i < tree_node.childCount; i++) {
 
-        // get the child node
-        var child_node = tree_node.child(i)
+    // get the child node
+    var child_node = tree_node.child(i)
 
-        // push the child node to the codeStructures array with indentation
-        // indentation represents the depth of the node in the tree
-        codeStructures.push(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column +  ')' +'\n')
-        // console.log(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column +  ')')
+    // push the child node to the codeStructures array with indentation
+    // indentation represents the depth of the node in the tree
+    codeStructures.push(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column + ')' + '\n')
+    // console.log(indentation.repeat(indent_count) + child_node.type + '(' + child_node.startPosition.row + ',' + child_node.startPosition.column + ') , (' + child_node.endPosition.row + ',' + child_node.endPosition.column +  ')')
 
-        // recursively traverse the child node
-        codeStructures.push(...recursivelyLog(child_node,indent_count + 1))
-    }
-    return codeStructures
+    // recursively traverse the child node
+    codeStructures.push(...recursivelyLog(child_node, indent_count + 1))
   }
+  return codeStructures
+}
 
 printTree()
 

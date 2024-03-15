@@ -14,7 +14,7 @@ const ignoreRegex = generateIgnoreRegex()
 function generateIgnoreRegex() {
     const text = fs.readFileSync('./configs/.path_ignore', 'utf8');
     const lines = text.trim().split("\n").filter(line => line.trim() !== "");
-    const ignoreRegex ='(' + lines.join(")|(") + ')';
+    const ignoreRegex = '(' + lines.join(")|(") + ')';
     return ignoreRegex
 }
 
@@ -33,7 +33,7 @@ async function* walk(dir, extType) {
         // If it is, then skip it
         const isIgnored = (filePath) => filePath.match(ignoreRegex);
         if (isIgnored(entry)) continue;
-        
+
         // If the entry is a directory, then walk through the directory
         if (d.isDirectory()) yield* walk(entry, extType);
 
