@@ -45,6 +45,24 @@ TreeNose supports the detection of 5 kinds of code smells with default threshold
 - Long Message Chain
 - Long Parameter List
 
+Here is a table about the metrics and thresholds TreeNose by default used to detect those smells:
+
+
+| Code Smell | Thresholds |
+| --- | --- | --- |
+| Long Class | LOC > 200, NOM > 20 |
+| Long Method | LOM > 100 |
+| Long Parameter List | PAR > 5 |
+| Complex Conditional | NOC > 3 |
+| Long Message Chain | LMC > 4 |
+
+- LOC: lines of class
+- NOM: number of sub methods in class
+- LOM: length of method
+- PAR: number of parameters
+- NOC: number of conditional cases
+- LMC: length of message chains
+
 **Note**: To fit your need, you can change the thresholds in the [detection configuration file](./src/configs/detect_config.json)
 
 ## Run Code Smell Detector
@@ -72,8 +90,7 @@ To run the example program, **Node** runtime environment and **npm** package man
 - input: Path to a directory or to a single file
 - lang: The target programming language that the target file is written in
 - out: Path to a directory the reports will reside
-- smell (optional): The smell type to detect
-- 
+- smell (optional): The smell types to detect, you are able to pass several code smells separated by space
 
 
 **Note:**
@@ -99,10 +116,15 @@ Note: you don't need to understand anything in this section to do code smell det
    1. lang
    2. file
 
+Here is an example:
+```bash
+node tree_printer.js --lang javascript --file ../example_codes/js_codes/conditional.js
+```
+
 ## Future Plans
 
-- Check the feasibility of fetching code with VSCode
-- Interact Node-Tree-Sitter with VSCode
+- Support more programming languages in TreeNose
+- Support more code smell detections in TreeNose
 
 # Development Note
 
