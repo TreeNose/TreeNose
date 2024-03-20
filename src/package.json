@@ -1,10 +1,11 @@
 {
-  "name": "to-be-decided",
+  "name": "TreeNose",
   "version": "1.0.0",
   "description": "A language-indepedent code smells detection tool based on tree sitter",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "author": "Yanqiao Chen",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "tree-sitter-javascript": "^0.20.1",
     "tree-sitter-python": "^0.20.4",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
   }
 }
