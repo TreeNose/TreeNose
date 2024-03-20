@@ -11,16 +11,15 @@ on:
 jobs:
   eslint:
     runs-on: ubuntu-latest
+    env:
+        working-directory: ./src
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Navigate to src Directory
-        run: cd src
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-
       - name: Install dependencies
         run: npm install
 
