@@ -26,8 +26,8 @@ function longMessageChains(chains, threshold, lang) {
     for (let chain of chains) {
         Visited = {}
         // check if the call chain is too long
-        callTooLong = checkDepthTooLong(chain.node, threshold, langWalkCallChainChain, langCheckCallChainChain)
-        callLine = chain.node.startPosition.row
+        var callTooLong = checkDepthTooLong(chain.node, threshold, langWalkCallChainChain, langCheckCallChainChain)
+        var callLine = chain.node.startPosition.row
 
         // if chain too long, report the line the chain starts
         if (callTooLong && !checkedLines.includes(callLine)) {

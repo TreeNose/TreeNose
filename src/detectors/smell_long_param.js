@@ -12,7 +12,7 @@ function longParameters(methods, threshold, lang) {
     var longParamsSmells = []
 
     // get language specific nodes for the parameters
-    paramsSyntaxes = Syntaxes["node"]["parameters"][lang]
+    const paramsSyntaxes = Syntaxes["node"]["parameters"][lang]
 
     for (let mtd of methods) {
         // get the parameters list node of the method

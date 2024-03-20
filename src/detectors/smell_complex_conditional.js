@@ -16,7 +16,7 @@ function complexConditional(ifs, switches, threshold, lang) {
     // get the target nodes for the language from category config 
     const langSwitchCase = Syntaxes['grammar'][SwitchCase][lang]
     const langIfClause = Syntaxes['grammar'][ifClause][lang]
-    targetNodes = [...langSwitchCase, ...langIfClause]
+    const targetNodes = [...langSwitchCase, ...langIfClause]
 
     // console.log(targetNodes)
     var complexConditionals = []

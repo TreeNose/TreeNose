@@ -25,7 +25,7 @@ function fetchCode(sourceCode, lang, smell) {
     for (let s of syntax_specific_smells) {
         const query = new Parser.Query(targetLang, `(${s}) @${smell}`);
 
-        captures = query.matches(tree.rootNode).map((x) => x.captures)
+        var captures = query.matches(tree.rootNode).map((x) => x.captures)
         matches.push(captures.flat())
     }
 

@@ -12,7 +12,7 @@ function longClass(classes, nol_threshold, noc_threshold, lang) {
     var longClassSmells = []
 
     for (let cls of classes) {
-        clsNode = cls.node
+        var clsNode = cls.node
 
         // nol: Number of line
         // noc: number of children (methods)
