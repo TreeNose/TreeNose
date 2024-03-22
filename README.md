@@ -49,7 +49,7 @@ Here is a table about the metrics and thresholds TreeNose by default used to det
 
 
 | Code Smell | Thresholds |
-| --- | --- | --- |
+| --- | --- |
 | Long Class | LOC > 200, NOM > 20 |
 | Long Method | LOM > 100 |
 | Long Parameter List | PAR > 5 |
