@@ -27,7 +27,7 @@ Code smells are a set of code design problems that hinder programmers to read or
 
 ## Associated Thesis
 
-The related thesis in published in ![this repository](https://github.com/ReadyResearchers-2023-24/cis-600-f2023-610-s2024-senior-thesis-Yanqiao4396)
+The related thesis in published in [this repository](https://github.com/ReadyResearchers-2023-24/cis-600-f2023-610-s2024-senior-thesis-Yanqiao4396)
 
 ## Related Work
 
