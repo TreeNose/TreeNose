@@ -25,6 +25,10 @@ This is Yanqiao's Artifact Repository for the 23-24 Allegheny senior session. Th
 
 Code smells are a set of code design problems that hinder programmers to read or maintain the source code in software. Driven by toxicity of code smells, the computer science community have been developing a wide range of code smell detection tools to detect code smells. However, most code smell detection tools are only able to detect code smells in single programming language. To extend the power of code smell detection tools, we developed TreeNose, a language-independent code smell detector.
 
+## Associated Thesis
+
+The related thesis in published in ![this repository](https://github.com/ReadyResearchers-2023-24/cis-600-f2023-610-s2024-senior-thesis-Yanqiao4396)
+
 ## Related Work
 
 - [Pysmell](https://github.com/chenzhifei731/Pysmell)
