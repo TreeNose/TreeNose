@@ -6,6 +6,7 @@
   - [Table of Cotents](#table-of-cotents)
   - [Introduction](#introduction)
   - [Motivation](#motivation)
+  - [Associated Thesis](#associated-thesis)
   - [Related Work](#related-work)
   - [Technical Details](#technical-details)
   - [Run Code Smell Detector](#run-code-smell-detector)
@@ -122,7 +123,7 @@ Note: you don't need to understand anything in this section to do code smell det
 
 Here is an example:
 ```bash
-node tree_printer.js --lang javascript --file ../example_codes/js_codes/conditional.js
+node tree_printer.js --lang javascript --input ../example_codes/js_codes/conditional.js
 ```
 
 ## Future Plans
