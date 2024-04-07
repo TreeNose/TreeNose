@@ -59,6 +59,9 @@ async function runCodeSmellDetection() {
         checkCodeSmells(src_code, lang, parsee_path)
         SmellDataBase.fileCount = 1
     } else {
+        if (ExtConfig[lang] == undefined) {
+            throw new Error('Invalid language provided or its suffixes are not defined.')
+        }
         // If the path is a directory, then walk through the directory and its subdirectories to find matching files
         for await (const target_file of walk(parsee_path, ExtConfig[lang])) {
             console.log(target_file)
