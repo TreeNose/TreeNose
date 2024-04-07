@@ -9,6 +9,9 @@
             ],
             "javascript": [
                 "call_expression"
+            ],
+            "ruby": [
+                "call"
             ]
         },
         "if_statement": {
@@ -20,6 +23,9 @@
             ],
             "javascript": [
                 "if_statement"
+            ],
+            "ruby": [
+                "if", "elsif"
             ]
         },
         "if_clause": {
@@ -31,6 +37,9 @@
             ],
             "javascript": [
                 "if"
+            ],
+            "ruby": [
+                "if", "elsif"
             ]
         },
         "switch_statement": {
@@ -42,6 +51,9 @@
             ],
             "javascript": [
                 "switch_statement"
+            ],
+            "ruby": [
+                "case"
             ]
         },
         "switch_case": {
@@ -53,6 +65,9 @@
             ],
             "javascript": [
                 "switch_case", "switch_default"
+            ],
+            "ruby":[
+                "when", "else"
             ]
         },
         "call_attribute": {
@@ -64,6 +79,9 @@
             ],
             "javascript": [
                 "member_expression"
+            ],
+            "ruby": [
+                "identifier"
             ]
         },
         "walk_call_chains": {
@@ -75,6 +93,9 @@
             ],
             "javascript": [
                 "member_expression", "call_expression"
+            ],
+            "ruby": [
+                "call", "identifier"
             ]
         },
         "check_call_chains": {
@@ -86,6 +107,9 @@
             ],
             "javascript": [
                 "member_expression"
+            ],
+            "ruby": [
+                "call", "identifier"
             ]
         },
         "attribute_access":{
@@ -97,6 +121,9 @@
             ],
             "javascript": [
                 "member_expression"
+            ],
+            "ruby": [
+                "call"
             ]
         },
         "class_definition": {
@@ -108,6 +135,9 @@
             ],
             "javascript": [
                 "class_declaration"
+            ],
+            "ruby": [
+                "class"
             ]
         },
         "method_definition": {
@@ -123,6 +153,9 @@
             ],
             "java": [
                 "method_declaration", "constructor_declaration"
+            ],
+            "ruby": [
+                "method", "singleton_method"
             ]
         },
         "parameters": {
@@ -134,6 +167,9 @@
             ],
             "javascript": [
                 "formal_parameters"
+            ],
+            "ruby": [
+                "method_parameters"
             ]
         },
         "field":{
@@ -145,6 +181,9 @@
             ],
             "javascript": [
                 "field_definition"
+            ],
+            "ruby": [
+                "instance_variable"
             ]
         },
         "parameter": {
@@ -162,6 +201,11 @@
                 "assignment_pattern",
                 "array_pattern",
                 "object_pattern"
+            ],
+            "ruby": [
+                "optional_parameter",
+                "keyword_parameter",
+                "identifier"
             ]
         }
     },
@@ -175,6 +219,9 @@
             ],
             "javascript": [
                 "formal_parameters", "parameters"
+            ],
+            "ruby": [
+                "method_parameters"
             ]
         }
     }
