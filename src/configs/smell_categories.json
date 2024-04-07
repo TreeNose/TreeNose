@@ -9,6 +9,9 @@
             ],
             "javascript": [
                 "call_expression"
+            ],
+            "rust":[
+                "call_expression"
             ]
         },
         "if_statement": {
@@ -20,6 +23,9 @@
             ],
             "javascript": [
                 "if_statement"
+            ],
+            "rust":[
+                "if_expression"
             ]
         },
         "if_clause": {
@@ -30,6 +36,9 @@
                 "if"
             ],
             "javascript": [
+                "if"
+            ],
+            "rust":[
                 "if"
             ]
         },
@@ -42,6 +51,9 @@
             ],
             "javascript": [
                 "switch_statement"
+            ],
+            "rust":[
+                "match_expression"
             ]
         },
         "switch_case": {
@@ -53,6 +65,9 @@
             ],
             "javascript": [
                 "switch_case", "switch_default"
+            ],
+            "rust":[
+                "match_arm"
             ]
         },
         "call_attribute": {
@@ -64,6 +79,9 @@
             ],
             "javascript": [
                 "member_expression"
+            ],
+            "rust":[
+                "field_expression"
             ]
         },
         "walk_call_chains": {
@@ -75,6 +93,9 @@
             ],
             "javascript": [
                 "member_expression", "call_expression"
+            ],
+            "rust":[
+                "call_expression", "generic_function", "field_expression"
             ]
         },
         "check_call_chains": {
@@ -86,6 +107,9 @@
             ],
             "javascript": [
                 "member_expression"
+            ],
+            "rust":[
+                "field_expression"
             ]
         },
         "attribute_access":{
@@ -97,6 +121,9 @@
             ],
             "javascript": [
                 "member_expression"
+            ],
+            "rust":[
+                "field_expression"
             ]
         },
         "class_definition": {
@@ -108,6 +135,9 @@
             ],
             "javascript": [
                 "class_declaration"
+            ],
+            "rust":[
+                "impl_item"
             ]
         },
         "method_definition": {
@@ -123,6 +153,10 @@
             ],
             "java": [
                 "method_declaration", "constructor_declaration"
+            ],
+            "rust":[
+                "function_item",
+                "function_signature_item"
             ]
         },
         "parameters": {
@@ -134,7 +168,8 @@
             ],
             "javascript": [
                 "formal_parameters"
-            ]
+            ],
+            "rust":["parameters"]
         },
         "field":{
             "python": [
@@ -145,6 +180,9 @@
             ],
             "javascript": [
                 "field_definition"
+            ],
+            "rust":[
+                "field_declaration"
             ]
         },
         "parameter": {
@@ -162,6 +200,9 @@
                 "assignment_pattern",
                 "array_pattern",
                 "object_pattern"
+            ],
+            "rust":[
+                "parameter"
             ]
         }
     },
@@ -175,6 +216,9 @@
             ],
             "javascript": [
                 "formal_parameters", "parameters"
+            ],
+            "rust":[
+                "parameters"
             ]
         }
     }
