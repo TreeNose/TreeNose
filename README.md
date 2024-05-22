@@ -30,7 +30,7 @@ TreeNose provides language-independent code smell detections across multiple pro
 
 ## Associated Thesis
 
-The related thesis in published in [this repository](https://github.com/ReadyResearchers-2023-24/cis-600-f2023-610-s2024-senior-thesis-Yanqiao4396)
+Here is a related [senior thesis](./docs/thesis.pdf)
 
 ## Run Code Smell Detector
 
@@ -47,7 +47,7 @@ To run the example program, **Node** runtime environment and **npm** package man
 
 ### Main Feature: Code Smell Detection
 
-`main.js` provides CLI to run TreeNose. It requires three flags to function:
+`main.js` provides CLI to run TreeNose. It requires three flags:
 
 - input: Path to a directory or to a single file
 - lang: The target programming language that the target file is written in
