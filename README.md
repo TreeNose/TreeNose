@@ -1,4 +1,4 @@
-# TreeNose
+# TreeNose - A Language-Independent Code Smell Detector
 
 ## Table of Contents
 
